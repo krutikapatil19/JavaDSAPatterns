@@ -22,11 +22,16 @@ public class ThreeSum {
                  result.add(Arrays.asList(nums[i],nums[j],nums[k])) ;
                  j++;
                  k--;
-                }
                 
+
+                while(j < k && nums[j] == nums[j-1]) j++;
+                while(k > j && nums[k] == nums[k+1]) k--; 
+                
+                }
                 else if(sum>0){
                     k--;
                 } else j++;
+
             }
         }
         return result;

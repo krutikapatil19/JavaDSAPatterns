@@ -3,17 +3,24 @@ public class ContainerWithMostWater {
         int i = 0;
         int j = height.length-1;
 
+        //to store the maximum water found so far
         int maxArea = 0;
 
         while(i<j){
+
+            //water is limited by the smaller bar
+            //width -> distance between two pointers(bars) 
             int waterArea = Math.min(height[i],height[j])* (j-i);
 
+            //Update maximum if a better container is found ,which stores more water
             if(waterArea>maxArea){
                 maxArea = waterArea;
-
             }
-                if(height[i]>height[j]) j--;
-                else i++;
+
+            //Move the pointer that has smaller height (in order to replace that small bar with a taller one which can hold more water)
+
+            if(height[i]>height[j]) j--;
+            else i++;
         }
              return maxArea;
     } 

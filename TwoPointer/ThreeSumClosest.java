@@ -6,11 +6,9 @@ public class ThreeSumClosest {
         Arrays.sort(nums);
         int bestClosestSum = nums[0] + nums[1] + nums[2];       //assume the first three numbers sum is closest to target
 
-
         //Fix one number at a time
         for(int i = 0;i<nums.length-2;i++){
         
-
         //Two pointers,j start at after i and k starts at the end    
         int j = i+1;
         int k = nums.length-1;
@@ -25,7 +23,6 @@ public class ThreeSumClosest {
             if(sum==target){
                 return sum;
             }
-
             //check if current sum is closer to target
             //compare distance from target
             if(Math.abs(sum-target) < Math.abs(bestClosestSum-target)){

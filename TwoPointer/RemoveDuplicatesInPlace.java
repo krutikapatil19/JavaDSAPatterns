@@ -8,11 +8,9 @@ public class RemoveDuplicatesInPlace {
             if(nums[i] != nums[j]){
                 j++;
                 nums[j] = nums[i];
-            } else {
-                continue;
             }
         }
-        return j;
+        return j+1;
     }
     public static void main(String[] args){
         int[] nums= {2,3,3,5,8,8,10};

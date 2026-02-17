@@ -16,12 +16,11 @@ public class RemoveDuplicatesInPlace {
                 nums[j] = nums[i];
             }
         }
-
         //return total number of unique elements
         return j+1;
     }
     public static void main(String[] args){
-        int[] nums= {2,3,3,5,8,8,10};
+        int[] nums= {2,3,3,5,8,8,8,10};
         System.out.println(removeDuplicates(nums));
     }
 }

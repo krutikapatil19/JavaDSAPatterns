@@ -2,10 +2,10 @@ import java.util.Arrays;
 public class SquaresOfSortedArray {
     public static int[] findSquares(int[] nums){
 
-        int i = 0;
-        int j = nums.length-1;
+        int i = 0; //i starts from beginning 
+        int j = nums.length-1; //j starts from end
 
-        int[] result = new int[nums.length];
+        int[] result = new int[nums.length]; //new array to store the sorted squares 
         int k = result.length-1;
 
         while(i<=j){

@@ -9,7 +9,7 @@ public class MoveZeroesToEnd {
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != 0) { // if the number is non-zero , then puttin it at j index.
 
-                if (i != j) {
+                if (i != j) { //if i and j are different , move non-zero forward
                     int temp = nums[i];
                     nums[i] = nums[j];
                     nums[j] = temp;

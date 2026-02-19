@@ -28,7 +28,7 @@ public class SquaresOfSortedArray {
         return result;
         }
         public static void main(String[] args){
-            int[] nums = {-6,-3,1,2,4,5,6};
+            int[] nums = {-10,-3,1,2,4,5,6};
             System.out.println(Arrays.toString(findSquares(nums)));
         }
     }

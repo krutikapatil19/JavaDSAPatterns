@@ -8,8 +8,7 @@ public class ValidPalindrome {
                 i++;
             }
 
-            while(i<j && !Character.isLetterOrDigit(s.charAt(j)))
-            if(s.charAt(i) == s.charAt(j)){
+            while(i<j && !Character.isLetterOrDigit(s.charAt(j))){
                 j--;
             }
 

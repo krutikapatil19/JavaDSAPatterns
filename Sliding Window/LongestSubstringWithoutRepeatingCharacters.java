@@ -1,5 +1,5 @@
 import java.util.HashMap;
-public class MaxSubstringWithoutRepeatingCharacters {
+public class LongestSubstringWithoutRepeatingCharacters {
     public static int largestUniqueSubstring(String str){
 
         HashMap<Character,Integer> map = new HashMap<>();

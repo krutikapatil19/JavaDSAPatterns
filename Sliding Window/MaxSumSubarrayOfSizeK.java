@@ -1,8 +1,8 @@
-public class MaxSumSubarray {
+public class MaxSumSubarrayOfSizeK {
     public static int maximumSubarraySum(int[] nums,int k){
 
         int currWindowSum  = 0;
-        int maxSum = Integer.MIN_VALUE;
+        int maxSum;
 
         for(int i = 0;i<k;i++){
             currWindowSum += nums[i];
@@ -14,7 +14,7 @@ public class MaxSumSubarray {
             currWindowSum = currWindowSum - nums[i-k] + nums[i];
             maxSum = Math.max(currWindowSum, maxSum);
         }
-        
+
         return maxSum;
     }
     public static void main(String[] args){

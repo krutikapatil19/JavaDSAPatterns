@@ -30,6 +30,7 @@ public class RemoveDuplicatesFromSortedList {
                 current = current.next;
         }
     }
+        //return updated head
         return head;
     }
 
@@ -41,6 +42,8 @@ public class RemoveDuplicatesFromSortedList {
 
         //call function to remove duplicates
         head = removeDuplicates(head);
+
+        //print updated list
         ListNode temp = head;
         while(temp!= null){
             System.out.print(temp.val + " ");

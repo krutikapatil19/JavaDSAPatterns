@@ -21,6 +21,7 @@ public class RemoveDuplicatesFromSortedList {
 
             //if current value and next value are same 
             if(current.val == current.next.val) {
+
                 //remove duplicate by skipping next node
                 current.next = current.next.next;
                 //if current element is same as the element at current.next , then remove the duplicate ,i.e current.next = current.next.next
@@ -39,6 +40,7 @@ public class RemoveDuplicatesFromSortedList {
         head.next = new ListNode(2);
         head.next.next = new ListNode(2);
         head.next.next.next = new ListNode(5);
+        head.next.next.next.next = new ListNode(5);
 
         //call function to remove duplicates
         head = removeDuplicates(head);

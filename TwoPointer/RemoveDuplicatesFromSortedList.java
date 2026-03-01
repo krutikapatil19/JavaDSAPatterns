@@ -12,11 +12,16 @@ public class RemoveDuplicatesFromSortedList {
 
     public static ListNode removeDuplicates (ListNode head){
 
+        //start from head
         ListNode current = head;
 
+        //traverse list until last node
+
         while(current != null && current.next != null){
+
+            //if current value and next value are same 
             if(current.val == current.next.val) {
-                //remove duplicate val
+                //remove duplicate by skipping next node
                 current.next = current.next.next;
                 //if current element is same as the element at current.next , then remove the duplicate ,i.e current.next = current.next.next
             } else {

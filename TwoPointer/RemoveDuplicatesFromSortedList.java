@@ -25,7 +25,8 @@ public class RemoveDuplicatesFromSortedList {
                 current.next = current.next.next;
                 //if current element is same as the element at current.next , then remove the duplicate ,i.e current.next = current.next.next
             } else {
-                //move forward
+
+                //if not duplicate, move forward
                 current = current.next;
         }
     }

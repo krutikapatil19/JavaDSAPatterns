@@ -39,6 +39,7 @@ public class RemoveDuplicatesFromSortedList {
         head.next.next = new ListNode(2);
         head.next.next.next = new ListNode(5);
 
+        //call function to remove duplicates
         head = removeDuplicates(head);
         ListNode temp = head;
         while(temp!= null){

@@ -18,9 +18,11 @@ public class ThreeSum {
                 continue;
             }
         }
-            int j = i+1;
-            int k = nums.length-1;
+            //Two pointers 
+            int j = i+1;    //next element after i
+            int k = nums.length-1;  //last element
 
+            //Find pair such that pair sum becomes 0
             while(j<k) {
                 int sum = nums[i]+nums[j]+nums[k];
                 if(sum == 0){

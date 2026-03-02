@@ -4,11 +4,16 @@ import java.util.List;
 public class ThreeSum {
     public static List<List<Integer>> findTriplets(int[] nums){
 
+        //Sorting the array , so two pointers can be used.
         Arrays.sort(nums);
+
+        //This will store all valid Triplets 
         List<List<Integer>> result = new ArrayList<>();
         
+        //Fix one element at a time
         for(int i = 0;i<nums.length-2;i++){
 
+            //Skip duplicate values for i
             if (i>0){if(nums[i] == nums[i-1]){
                 continue;
             }

@@ -50,7 +50,7 @@ public class ThreeSum {
         return result;
     }
     public static void main(String[] args){
-        int [] nums = {-8,-7,-4,3,6,11,15};
+        int [] nums = {-8,-7,-4,3,6,11,12,15};
         System.out.println(findTriplets(nums));
     }
 }

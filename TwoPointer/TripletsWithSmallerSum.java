@@ -24,7 +24,7 @@ public class TripletsWithSmallerSum {
     }
     public static void main(String[] args){
         int[] nums = {-2,0,1,3};
-        int sum = 2;
+        int sum = 3;
         System.out.println(findTriplets(nums,sum));
     }
 }

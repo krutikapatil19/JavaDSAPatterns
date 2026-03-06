@@ -6,6 +6,7 @@ public class DutchNationalFlag {
         while(mid <= high) {
             if(nums[mid] == 0) {
               
+                //swapping nums[low] and nums[mid]
                 int temp = nums[low];
                 nums[low] = nums[mid];
                 nums[mid] = temp;
@@ -17,6 +18,7 @@ public class DutchNationalFlag {
                 mid++;
             }
             else { 
+            //swap nums[mid] and nums[high]
             int temp = nums[mid];
             nums[mid]= nums [high];
             nums[high]= temp;

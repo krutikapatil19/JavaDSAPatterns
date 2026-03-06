@@ -13,11 +13,14 @@ public class SubarrayProductLessThanK {
 
             //right pointer moves through the array (expands the window)
             for(int right = 0;right<nums.length;right++){
+
+            //include current element in the product    
             currentProduct *= nums[right];
 
+            //if product becomes too large, shrink window from left 
             while(currentProduct>=target){
                 //shrink the window
-                currentProduct /= nums[left];
+                currentProduct /= nums[left];   //remove left element from product 
                 left++;
             } 
             count += right - left +1;

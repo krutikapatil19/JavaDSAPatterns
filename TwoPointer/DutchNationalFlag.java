@@ -23,7 +23,6 @@ public class DutchNationalFlag {
             nums[mid]= nums [high];
             nums[high]= temp;
             high--;
-
             }
         }
         return nums;

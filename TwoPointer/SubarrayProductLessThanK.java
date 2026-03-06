@@ -23,8 +23,11 @@ public class SubarrayProductLessThanK {
                 currentProduct /= nums[left];   //remove left element from product 
                 left++;     //move window start forward
             } 
+            //count all valid subarrays ending at 'right'
+            //number of such subarrays = window size 
             count += right - left +1;
         }
+        //return total number of valid subarrays
         return count;
     }
     public static void main(String[] args){

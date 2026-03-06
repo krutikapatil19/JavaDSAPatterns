@@ -21,7 +21,7 @@ public class SubarrayProductLessThanK {
             while(currentProduct>=target){
                 //shrink the window
                 currentProduct /= nums[left];   //remove left element from product 
-                left++;
+                left++;     //move window start forward
             } 
             count += right - left +1;
         }

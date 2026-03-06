@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class DutchNationalFlag {
     public static int[] sortColors(int[] nums) {
         int low = 0,mid = 0, high = nums.length -1;

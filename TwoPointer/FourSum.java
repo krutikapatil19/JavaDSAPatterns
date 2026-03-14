@@ -34,7 +34,7 @@ public class FourSum {
             } else if (sum >target) {
                 l--;
             } else {
-                j++;
+                k++;
             }
         }
     }

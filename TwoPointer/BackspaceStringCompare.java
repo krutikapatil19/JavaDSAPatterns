@@ -19,22 +19,22 @@ public class BackspaceStringCompare {
             //if current char in s is '#', increase skip count
             if(i>=0 && s.charAt(i) == '#'){
                 skipS++;        //one character should be skipped
-                i--;
+                i--;            //move pointer left 
                 continue;       //restart loop
             } 
             //skip characters that were deleted by '#'
             else if (skipS > 0) {
-                skipS --;
-                i--;
+                skipS --;       //one character should be skipped
+                i--;            //move pointer left 
                 continue;
             }
 
 
-            //if current char in t is '#',increase skip count
-            if(j>= 0 && t.charAt(j) == '#') {
-                skipT++;
-                j--;
-                continue;
+        //if current char in t is '#',increase skip count
+        if(j>= 0 && t.charAt(j) == '#') {
+            skipT++;        //one character should be skipped
+            j--;            //move one pointer left 
+            continue;
         } 
         //skip characters deleted by '#'
         else if(skipT > 0) {
@@ -44,24 +44,26 @@ public class BackspaceStringCompare {
         }
 
         //compare valid characters of both strings
-
         if(i >= 0 && j>= 0 && s.charAt(i) != t.charAt(j))
             return false;
 
         //if only one string still has characters
         if((i>= 0) != (j >= 0))
             return false;
+
         //move both pointers to next characters
         i--;
         j--;
     }
+
     //if loop finishes , strings are equal after backspaces
     return true;
-     
     }
     public static void main(String[] args){
         String s = "ab#c";
         String t = "ad#c";
+
+        //print result of comparison
         System.out.println(backSpaceCompare(s,t));
     }
 }

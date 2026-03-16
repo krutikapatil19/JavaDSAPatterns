@@ -24,7 +24,7 @@ public class BackspaceStringCompare {
             } 
             //skip characters that were deleted by '#'
             else if (skipS > 0) {
-                skipS --;       //one character should be skipped
+                skipS --;       //one skipped character used
                 i--;            //move pointer left 
                 continue;
             }

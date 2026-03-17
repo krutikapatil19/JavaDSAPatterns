@@ -48,6 +48,7 @@ public class ShortestUnsortedContinuousSubarray {
                 right++;
             }
 
+            //length of final unsorted array 
              length = right -left+1;
 
         return length;

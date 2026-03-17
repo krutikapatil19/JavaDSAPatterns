@@ -1,16 +1,10 @@
 public class ShortestUnsortedContinuousSubarray {
     public static int findUnsortedSubarray(int[] nums){
 
-    
         //variables for boundaries
-    
-        int min = nums[left];
-        int max = nums[left];
-
         int left = -1;
         int right = -1;
-
-        if(left == -1)return 0;
+        
         int length = 0;
 
         for(int i= 0;i<nums.length-1;i++){
@@ -19,6 +13,7 @@ public class ShortestUnsortedContinuousSubarray {
                 break;
             }
         } 
+        if(left == -1)return 0;
 
         for(int j=nums.length-1;j>0;j--){
             if(nums[j]<nums[j-1]){
@@ -26,6 +21,10 @@ public class ShortestUnsortedContinuousSubarray {
                 break;
             } 
         }
+
+        int min = nums[left];
+        int max = nums[left];
+
         for(int k = left; k<=right; k++){
             if(nums[k] < min) {
                 min = nums[k];
@@ -35,8 +34,6 @@ public class ShortestUnsortedContinuousSubarray {
                 max = nums[k];
             }
         }
-    
-
             while(left >0 && nums[left-1] > min){
                 left--;
             }
@@ -45,7 +42,7 @@ public class ShortestUnsortedContinuousSubarray {
             }
 
              length = right -left+1;
-             
+
         return length;
     }
     public static void main(String[] args){

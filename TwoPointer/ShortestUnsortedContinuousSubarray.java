@@ -14,7 +14,6 @@ public class ShortestUnsortedContinuousSubarray {
                 break;
             }
         } 
-        
         //if array is already sorted , return 0
         if(left == -1)return 0;
 
@@ -25,8 +24,6 @@ public class ShortestUnsortedContinuousSubarray {
                 break;
             } 
         }
-
-
         //Step 3: Find min and max in the unsorted window 
         int min = nums[left];
         int max = nums[left];
@@ -40,13 +37,11 @@ public class ShortestUnsortedContinuousSubarray {
                 max = nums[k];      //largest value in window 
             }
         }
-
-        //Step 4: Expand left boundary if needed 
-        //if elements before left are bigger than min -> include them
+            //Step 4: Expand left boundary if needed 
+            //if elements before left are bigger than min -> include them
             while(left > 0 && nums[left - 1] > min){
                 left--;
             }
-
             //Step 5: Expand right boundary if needed 
             //if elements after right are smaller than max -> include them
             while(right < nums.length - 1 && nums[right + 1] < max){

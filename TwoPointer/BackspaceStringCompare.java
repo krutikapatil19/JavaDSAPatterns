@@ -42,7 +42,6 @@ public class BackspaceStringCompare {
             j--;
             continue;
         }
-
         //compare valid characters of both strings
         if(i >= 0 && j>= 0 && s.charAt(i) != t.charAt(j))
             return false;

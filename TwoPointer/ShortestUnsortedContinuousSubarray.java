@@ -34,10 +34,10 @@ public class ShortestUnsortedContinuousSubarray {
                 max = nums[k];
             }
         }
-            while(left >0 && nums[left-1] > min){
+            while(left > 0 && nums[left - 1] > min){
                 left--;
             }
-            while(right<nums.length-1 && nums[right +1] <max){
+            while(right < nums.length - 1 && nums[right + 1] < max){
                 right++;
             }
 

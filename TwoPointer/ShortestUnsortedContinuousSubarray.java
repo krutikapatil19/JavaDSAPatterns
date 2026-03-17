@@ -40,9 +40,15 @@ public class ShortestUnsortedContinuousSubarray {
                 max = nums[k];      //largest value in window 
             }
         }
+
+        //Step 4: Expand left boundary if needed 
+        //if elements before left are bigger than min -> include them
             while(left > 0 && nums[left - 1] > min){
                 left--;
             }
+
+            //Step 5: Expand right boundary if needed 
+            //if elements after right are smaller than max -> include them
             while(right < nums.length - 1 && nums[right + 1] < max){
                 right++;
             }

@@ -11,10 +11,14 @@ public class DetectCycle {
 
     public static boolean hasCycle (Node head ){
 
+        //Fast and Slow pointers 
         Node slow = head;
         Node fast = head;
 
+        //Traverse the list until fast does'nt reach null
         while(fast!= null && fast.next != null){
+
+            //slow moves one step and Fast moves two steps at a time.
             slow = slow.next;
             fast = fast.next.next;
             if(slow == fast) return true;

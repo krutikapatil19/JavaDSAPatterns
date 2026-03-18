@@ -8,6 +8,7 @@ class Node {
 }
 
 public class DetectCycle {
+
     public static boolean hasCycle (Node head ){
 
         Node slow = head;
@@ -34,6 +35,7 @@ public class DetectCycle {
         n3.next = n4;
         n4.next = n3;
 
+        //Check cycle
         if(hasCycle(n1))
             System.out.println("Cycle exists.");
         else

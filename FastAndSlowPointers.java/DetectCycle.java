@@ -23,7 +23,7 @@ public class DetectCycle {
             fast = fast.next.next;
             if(slow == fast) return true;   //if slow and fast meets ,it means cycle exists.
         }
-        return false;
+        return false;   //no cycle exists
     }
        public static void main(String[] args) {
 

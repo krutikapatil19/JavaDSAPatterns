@@ -21,7 +21,7 @@ public class DetectCycle {
             //slow moves one step and Fast moves two steps at a time.
             slow = slow.next;
             fast = fast.next.next;
-            if(slow == fast) return true;
+            if(slow == fast) return true;   //if slow and fast meets ,it means cycle exists.
         }
         return false;
     }

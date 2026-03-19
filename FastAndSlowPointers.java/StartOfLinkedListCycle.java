@@ -18,12 +18,16 @@ public class StartOfLinkedListCycle {
         //Move pointers to detect cycle
         while(fast!=null && fast.next != null){
 
-            slow = slow.next;
-            fast = fast.next.next;
+            slow = slow.next;       //move slow by one step
+            fast = fast.next.next;  //move fast by two steps
+
+            //If they meet, cycle exists
             if(slow == fast) {
+
+                //Create a new pointer from head 
                 Node temp = head;
 
-            //moving both 1 step
+            //moving both pointers by 1 step
             while(temp !=slow){
             slow = slow.next;
             temp = temp.next;

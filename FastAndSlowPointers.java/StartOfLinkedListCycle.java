@@ -28,10 +28,12 @@ public class StartOfLinkedListCycle {
                 Node temp = head;
 
             //moving both pointers by 1 step
+            //They will meet at the start of the cycle
             while(temp !=slow){
             slow = slow.next;
             temp = temp.next;
         }
+        //Return start of the cycle
         return temp;
     }
     }

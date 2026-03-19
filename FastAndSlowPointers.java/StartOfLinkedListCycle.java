@@ -11,10 +11,11 @@ public class StartOfLinkedListCycle {
     public static Node startOfCycle (Node head){
 
         
-        //Fast and slow pointers
+        //Initialize Fast and slow pointers
         Node slow = head;
         Node fast = head;
 
+        //Move pointers to detect cycle
         while(fast!=null && fast.next != null){
 
             slow = slow.next;

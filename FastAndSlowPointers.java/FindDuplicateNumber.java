@@ -1,13 +1,14 @@
 public class FindDuplicateNumber {
     public static int findDuplicate(int[]nums){
 
+        //Initialize pointers
         int slow = nums[0];
         int fast = nums[0];
 
-        //cycle detect
+        //detect cycle (do-while , so it runs atleast once)
         do {
-            slow = nums[slow];
-            fast = nums[nums[fast]];
+            slow = nums[slow];          //move one step
+            fast = nums[nums[fast]];    //move two steps
         }
         while(slow != fast );
         

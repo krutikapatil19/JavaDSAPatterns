@@ -1,10 +1,13 @@
 public class HappyNumber {
+
+    //Function to get next number(sum of squares of digit)
     public static int next(int n){
 
         int sum = 0;
        
+        //Take each digit and add its square
         while(n > 0){
-            int digit = n % 10;
+            int digit = n % 10;     //get last digit 
             sum += digit * digit;
             n = n/10;
         }

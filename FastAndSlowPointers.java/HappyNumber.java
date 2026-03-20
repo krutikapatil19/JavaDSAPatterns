@@ -8,8 +8,8 @@ public class HappyNumber {
         //Take each digit and add its square
         while(n > 0){
             int digit = n % 10;     //get last digit 
-            sum += digit * digit;
-            n = n/10;
+            sum += digit * digit;   //add square of digit
+            n = n/10;               //remove last digit
         }
             return sum;
         }

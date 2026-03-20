@@ -15,6 +15,7 @@ public class FindDuplicateNumber {
         //reset one pointer to start
         slow = nums[0];
 
+        //move both 1 step until they meet
         while(slow != fast) {
             slow = nums[slow];
             fast = nums[fast];

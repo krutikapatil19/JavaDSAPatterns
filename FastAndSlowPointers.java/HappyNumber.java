@@ -11,23 +11,31 @@ public class HappyNumber {
             sum += digit * digit;   //add square of digit
             n = n/10;               //remove last digit
         }
-            return sum;
+            return sum;     //return new number
         }
 
         public static boolean isHappyNumber(int n){
+
+            //Initialize two pointers
             int slow = n;
             int fast = n;
 
+            //keep moving until we get result
             while(true){
-                slow = next(slow);
-                fast = next(next(fast));
+                slow = next(slow);          //move slow by 1 step
+                fast = next(next(fast));    //move fast by 2 steps
 
+                //if fast reaches 1 -> happy number
                 if(fast == 1)return true;
+
+                //if both meet -> cycle -> not happy number
                 if(slow == fast)return false;
             }
         }
     public static void main(String[] args){
         int n = 19;
+
+        //check and print result 
         System.out.println(isHappyNumber(n));
 }
 }

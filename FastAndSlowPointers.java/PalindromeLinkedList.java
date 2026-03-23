@@ -38,11 +38,11 @@ class Node {
         Node second = prev;
 
         while(second != null){
-        if(first.val != second.val){
+            if(first.val != second.val){
         return false;
          }
-        first = first.next;
-        second = second.next;
+            first = first.next;
+            second = second.next;
         }
 
         return true;

@@ -33,7 +33,6 @@ class Node {
             prev = curr;
             curr = next;
         }
-       
         Node first = head;
         Node second = prev;
 

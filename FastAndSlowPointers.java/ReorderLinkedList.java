@@ -32,6 +32,7 @@ public class ReorderLinkedList {
         //break the list into two halves 
         slow.next = null;
 
+        //reverse the second half
         while(curr != null) {
             Node next = curr.next;
             curr.next = prev;
@@ -39,11 +40,13 @@ public class ReorderLinkedList {
             curr = next;
         }
 
-        //Step 3: Merge both halves
+        //Step 3: Merge both halves alternatively
         Node first = head;
         Node second = prev;
 
         while(second != null) {
+
+            //saves next nodes
             Node temp1 = first.next;
             Node temp2 = second.next;
 

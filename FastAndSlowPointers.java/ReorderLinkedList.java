@@ -12,12 +12,15 @@ public class ReorderLinkedList {
 
     public static void reorderList(Node head){
 
+        //When list is empty or only 1 node , nothing to do 
         if(head == null || head.next == null) return;
 
         //Step1: Find Middle 
         Node slow = head;
         Node fast = head;
 
+        //Slow moves 1 step , fast moves 2 steps
+        //when fast reaches end ,slow is at middle 
         while(fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
@@ -25,6 +28,8 @@ public class ReorderLinkedList {
         //Step 2: Reverse second half 
         Node prev = null;
         Node curr = slow.next;
+
+        //break the list into two halves 
         slow.next = null;
 
         while(curr != null) {

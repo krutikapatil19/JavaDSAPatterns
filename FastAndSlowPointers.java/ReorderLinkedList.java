@@ -18,7 +18,6 @@ public class ReorderLinkedList {
         //Step1: Find Middle 
         Node slow = head;
         Node fast = head;
-
         //Slow moves 1 step , fast moves 2 steps
         //when fast reaches end ,slow is at middle 
         while(fast != null && fast.next != null) {

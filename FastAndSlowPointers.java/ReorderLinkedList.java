@@ -14,7 +14,7 @@ public class ReorderLinkedList {
 
         if(head == null || head.next == null) return;
 
-        //Find Middle 
+        //Step1: Find Middle 
         Node slow = head;
         Node fast = head;
 
@@ -22,9 +22,7 @@ public class ReorderLinkedList {
             slow = slow.next;
             fast = fast.next.next;
         }
-
-
-        //Reverse second half 
+        //Step 2: Reverse second half 
         Node prev = null;
         Node curr = slow.next;
         slow.next = null;
@@ -36,7 +34,7 @@ public class ReorderLinkedList {
             curr = next;
         }
 
-        //Merge both halves
+        //Step 3: Merge both halves
         Node first = head;
         Node second = prev;
 

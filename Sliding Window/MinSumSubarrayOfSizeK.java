@@ -17,8 +17,8 @@ public class MinSumSubarrayOfSizeK {
         return minSum;
     }
     public static void main(String[] args){
-        int[] nums = {2,3,6,10,5,9};
-        int k = 3;
+        int[] nums = {2,3,1,2,4,3};
+        int k = 2;
         System.out.println(minimumSubarraySum(nums,k));
     }
 }

@@ -1,24 +1,24 @@
 public class MinSumSubarrayOfSizeK {
-    public static int minimumSubarraySum(int[] nums, int k){
+    public static int minimumSubarrayLength(int[] nums, int target){
 
-        int currWindowSum = 0;
-        int minSum;
+        int start = 0;
+        int sum = 0;
+        int minLength = Integer.MAX_VALUE;
 
-        for(int i = 0;i<k;i++){
-            currWindowSum += nums[i];
+        for(int end = 0;end<nums.length;end++){
+            sum += nums[end];
+
+            while(sum >= target){
+                minLength = Math.min(minLength, end-start+1);
+                sum -= nums[end];
+                start++;
+            }
         }
-
-        minSum = currWindowSum;
-
-        for(int i = k;i<nums.length;i++) {
-            currWindowSum = currWindowSum - nums[i-k] + nums[i];
-            minSum = Math.min(currWindowSum, minSum);
-        }
-        return minSum;
+        return minLength;
     }
     public static void main(String[] args){
         int[] nums = {2,3,1,2,4,3};
-        int k = 2;
-        System.out.println(minimumSubarraySum(nums,k));
+        int target = 7;
+        System.out.println(minimumSubarrayLength(nums,target));
     }
 }

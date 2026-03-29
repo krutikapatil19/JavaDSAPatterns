@@ -10,7 +10,7 @@ public class MinSumSubarrayOfSizeK {
 
             while(sum >= target){
                 minLength = Math.min(minLength, end-start+1);
-                sum -= nums[end];
+                sum -= nums[start];
                 start++;
             }
         }

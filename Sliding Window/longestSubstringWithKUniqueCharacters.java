@@ -20,8 +20,6 @@ public class longestSubstringWithKUniqueCharacters {
             map.put(leftChar, map.get(leftChar)-1); //decrease freq
 
             //shrink window
-            if(map.containsKey(s.charAt(i))){
-            }
             //if frequency becomes 0 -> remov from map
             if(map.get(leftChar)==0){
                 map.remove(leftChar);

@@ -13,6 +13,7 @@ public class longestSubstringWithKUniqueCharacters {
             char ch = s.charAt(right);
             map.put(ch, map.getOrDefault(ch,0) + 1);
         
+        //shrink window if more than k unique characters
         while(map.size()>k){
             char leftChar = s.charAt(left);
             map.put(leftChar, map.get(leftChar)-1); //decrease freq

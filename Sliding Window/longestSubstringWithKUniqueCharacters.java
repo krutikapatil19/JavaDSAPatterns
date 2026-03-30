@@ -17,14 +17,17 @@ public class longestSubstringWithKUniqueCharacters {
             //shrink window if more than k unique characters
             while(map.size()>k){
             char leftChar = s.charAt(left);
+
             map.put(leftChar, map.get(leftChar)-1); //decrease freq
 
             //if frequency becomes 0 -> remov from map
             if(map.get(leftChar)==0){
                 map.remove(leftChar);
             }
-            left++;
+            left++;     //move left pointer
         }
+
+        //store answer when exactly k unique characters
         if(map.size() == k){
         maxLength = Math.max(maxLength, right-left+1);
     }

@@ -26,8 +26,10 @@ public class longestSubstringWithKUniqueCharacters {
             }
             left++;
         }
+        if(map.size() == k){
         maxLength = Math.max(maxLength, right - left+1);
     }
+}
         return maxLength;
     }
     public static void main(String[] args){

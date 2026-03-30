@@ -3,13 +3,12 @@ public class longestSubstringWithKUniqueCharacters {
     public static int lengthOfLongestKSubstring(String s, int k){
 
         int left = 0;
-        int right;
         int maxLength=0;
 
         //using HashMap to store k distinct characters
         HashMap<Character,Integer> map = new HashMap<>();
 
-        for(right= 0;right<s.length();right++){
+        for(int right= 0;right<s.length();right++){
             char ch = s.charAt(right);
             map.put(ch, map.getOrDefault(ch,0) + 1);
         
@@ -26,7 +25,7 @@ public class longestSubstringWithKUniqueCharacters {
             left++;
         }
         if(map.size() == k){
-        maxLength = Math.max(maxLength, right - left+1);
+        maxLength = Math.max(maxLength, right-left+1);
     }
 }
         return maxLength;

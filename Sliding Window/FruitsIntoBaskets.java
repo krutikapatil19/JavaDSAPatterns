@@ -15,7 +15,7 @@ public class FruitsIntoBaskets {
             map.put(fruit,map.getOrDefault(fruit,0) + 1);
 
             //Fix window if more than 2 types
-            while(map.size()>2){
+            while(map.size() > 2){
                 int leftFruit = fruits[left];
 
             //decrease count of left fruit

@@ -25,8 +25,12 @@ public class FruitsIntoBaskets {
             if(map.get(leftFruit)==0){
                 map.remove(leftFruit);
             }
-                left++;
+
+            //move left pointer
+            left++;
             }
+
+            //Count max fruits (valid window)
                 maxCount = Math.max(maxCount, right -left+1);
         }
         return maxCount;

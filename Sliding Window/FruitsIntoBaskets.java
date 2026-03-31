@@ -3,7 +3,7 @@ public class FruitsIntoBaskets {
     public static int countOfFruits(int[] fruits){
 
         int left = 0;       //start of window
-        int maxCount = 0;  //number of fruits
+        int maxFruits = 0;  //number of fruits
 
         //using HashMap to store Frequency or fruitCount
         HashMap<Integer,Integer> map = new HashMap<>();
@@ -30,10 +30,10 @@ public class FruitsIntoBaskets {
             left++;
             }
 
-            //Count max fruits (valid window)
-                maxCount = Math.max(maxCount, right -left+1);
+            //Update max fruits in valid window
+                maxFruits = Math.max(maxFruits, right -left+1);
         }
-        return maxCount;
+        return maxFruits;
     }
     public static void main(String[] args){
         int[] fruits = {1,2,3,2,2};

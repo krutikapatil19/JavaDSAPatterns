@@ -18,8 +18,10 @@ public class FruitsIntoBaskets {
             while(map.size()>2){
                 int leftFruit = fruits[left];
 
+            //decrease count of left fruit
             map.put(leftFruit, map.get(leftFruit)-1);
 
+            //if count becomes 0 -> remove it
             if(map.get(leftFruit)==0){
                 map.remove(leftFruit);
             }

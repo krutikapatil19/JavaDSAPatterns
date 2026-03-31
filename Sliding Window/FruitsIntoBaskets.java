@@ -4,6 +4,8 @@ public class FruitsIntoBaskets {
 
         int left = 0;
         int maxLength = 0;
+
+        //using HashMap to store Frequency
         HashMap<Integer,Integer> map = new HashMap<>();
 
         for(int right = 0; right<fruits.length;right++){
@@ -21,9 +23,9 @@ public class FruitsIntoBaskets {
             }
                 left++;
             }
-            if(map.size() == 2){
+            
                 maxLength = Math.max(maxLength, right -left+1);
-            }
+            
         }
         return maxLength;
     }

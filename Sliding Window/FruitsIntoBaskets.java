@@ -40,3 +40,7 @@ public class FruitsIntoBaskets {
         System.out.println(countOfFruits(fruits));
     }
 }
+
+
+// Add fruit → shrink if >2 types → update max
+// Sliding window ensures optimal O(n) solution

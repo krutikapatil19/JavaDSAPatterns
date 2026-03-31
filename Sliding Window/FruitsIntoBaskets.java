@@ -5,12 +5,13 @@ public class FruitsIntoBaskets {
         int left = 0;       //start of window
         int maxCount = 0;  //number of fruits
 
-        //using HashMap to store Frequency
+        //using HashMap to store Frequency or fruitCount
         HashMap<Integer,Integer> map = new HashMap<>();
 
         for(int right = 0; right<fruits.length;right++){
             int fruit = fruits[right];
 
+            //Add fruit to window (increase count)
             map.put(fruit,map.getOrDefault(fruit,0) + 1);
 
             while(map.size()>2){

@@ -2,8 +2,8 @@ import java.util.HashMap;
 public class FruitsIntoBaskets {
     public static int countOfFruits(int[] fruits){
 
-        int left = 0;
-        int maxLength = 0;
+        int left = 0;       //start of window
+        int maxCount = 0;  //number of fruits
 
         //using HashMap to store Frequency
         HashMap<Integer,Integer> map = new HashMap<>();
@@ -23,11 +23,9 @@ public class FruitsIntoBaskets {
             }
                 left++;
             }
-            
-                maxLength = Math.max(maxLength, right -left+1);
-            
+                maxCount = Math.max(maxCount, right -left+1);
         }
-        return maxLength;
+        return maxCount;
     }
     public static void main(String[] args){
         int[] fruits = {1,2,3,2,2};

@@ -36,7 +36,7 @@ public class FruitsIntoBaskets {
         return maxFruits;
     }
     public static void main(String[] args){
-        int[] fruits = {1,2,3,2,2};
+        int[] fruits = {1,1,1,1};
         System.out.println(countOfFruits(fruits));
     }
 }

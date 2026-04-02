@@ -3,7 +3,7 @@ public class NoRepeatSubstring {
     public static int longestSubstringWithoutRepeatingChar(String s){
 
         int left = 0;   //start of window 
-        int maxlength = 0;     //length of longest Substring w/o repeating characters
+        int maxLength = 0;     //length of longest Substring w/o repeating characters
 
         //using HashMap to store frequency
         HashMap<Character,Integer> map = new HashMap<>();
@@ -11,7 +11,7 @@ public class NoRepeatSubstring {
         for(int right = 0; right<s.length(); right++){
             char ch = s.charAt(right);
             
-            //Add character to window
+            //Add character to window (increase frequency)
             map.put(ch, map.getOrDefault(ch,0) + 1);
 
             //Shrinking the window if a character appears more than once. (having freq >1)
@@ -26,9 +26,9 @@ public class NoRepeatSubstring {
                 }
                 left++; //move left pointer
             }
-            maxlength = Math.max(maxlength, right-left+1);
+            maxLength = Math.max(maxLength, right-left+1);
         }
-    return maxlength;
+    return maxLength;
     }
     public static void main(String[] args){
         String s = "abcabb";

@@ -3,7 +3,7 @@ public class NoRepeatSubstring {
     public static int longestSubstringWithoutRepeatingChar(String s){
 
         int left = 0;
-        int length = 0;
+        int maxlength = 0;
 
         HashMap<Character,Integer> map = new HashMap<>();
 
@@ -24,9 +24,9 @@ public class NoRepeatSubstring {
                 }
                 left++;
             }
-            length = Math.max(length, right-left+1);
+            maxlength = Math.max(maxlength, right-left+1);
         }
-    return length;
+    return maxlength;
     }
     public static void main(String[] args){
         String s = "abcabb";

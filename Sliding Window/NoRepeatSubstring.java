@@ -14,7 +14,7 @@ public class NoRepeatSubstring {
             //Add character to window (increase frequency)
             map.put(ch, map.getOrDefault(ch,0) + 1);
 
-            //Shrinking the window if a character appears more than once. (having freq >1)
+            //Shrinking the window until no character appears more than once. (shrink until no char has freq >1)
             while(map.get(ch)>1){
                 char leftChar = s.charAt(left);
 

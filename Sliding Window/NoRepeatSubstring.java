@@ -14,17 +14,17 @@ public class NoRepeatSubstring {
             //Add character to window
             map.put(ch, map.getOrDefault(ch,0) + 1);
 
+            //Shrinking the window if a character appears more than once. (having freq >1)
             while(map.get(ch)>1){
                 char leftChar = s.charAt(left);
 
                 map.put(leftChar, map.get(leftChar)-1);
 
-                //shrinking the window logic 
-
+                //if frequency becomes 0 -> remove from map
                 if(map.get(leftChar)==0){
                     map.remove(leftChar);
                 }
-                left++;
+                left++; //move left pointer
             }
             maxlength = Math.max(maxlength, right-left+1);
         }

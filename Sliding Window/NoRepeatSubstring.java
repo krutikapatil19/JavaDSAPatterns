@@ -2,14 +2,16 @@ import java.util.HashMap;
 public class NoRepeatSubstring {
     public static int longestSubstringWithoutRepeatingChar(String s){
 
-        int left = 0;
-        int maxlength = 0;
+        int left = 0;   //start of window 
+        int maxlength = 0;     //length of longest Substring w/o repeating characters
 
+        //using HashMap to store frequency
         HashMap<Character,Integer> map = new HashMap<>();
 
         for(int right = 0; right<s.length(); right++){
             char ch = s.charAt(right);
             
+            //Add character to window
             map.put(ch, map.getOrDefault(ch,0) + 1);
 
             while(map.get(ch)>1){

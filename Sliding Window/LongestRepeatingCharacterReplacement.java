@@ -2,7 +2,6 @@ import java.util.HashMap;
 public class LongestRepeatingCharacterReplacement {
     public static int characterReplacement(String s, int k){
 
-        //variables
         int left = 0;
 
         int maxLen = 0;

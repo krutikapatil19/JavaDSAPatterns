@@ -26,14 +26,13 @@ public class LongestRepeatingCharacterReplacement {
 
                 map.put(leftChar, map.get(leftChar)-1);
 
-                maxLen = Math.max(maxLen, right-left+1);
-
                 //if frequency becomes 0 -> remove from map
                 if(map.get(leftChar)==0){
                     map.remove(leftChar);
                 }
                 left++;
             }
+            maxLen = Math.max(maxLen, right-left+1);
         }
         return maxLen;
         }

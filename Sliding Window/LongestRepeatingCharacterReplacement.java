@@ -2,20 +2,24 @@ import java.util.HashMap;
 public class LongestRepeatingCharacterReplacement {
     public static int characterReplacement(String s, int k){
 
-        int left = 0;
+        int left = 0;       //left character of window 
+        int maxLen = 0;     //store final answer 
+        int maxFreq = 0;    //store highest frequency char in current window
 
-        int maxLen = 0;
-        int maxFreq = 0;
-
+        //to store frequency of characters 
         HashMap<Character,Integer> map = new HashMap<>();
   
+        //expand window using right pointer
         for(int right = 0;right<s.length();right++){
             char ch = s.charAt(right);
 
+            //add current character to map
             map.put(ch,map.getOrDefault(ch,0) + 1);
 
+            //current window size 
             int windowSize = right-left + 1;
 
+            //update max frequency character to map
             maxFreq = Math.max(maxFreq, map.get(ch));
 
             //Shrink window

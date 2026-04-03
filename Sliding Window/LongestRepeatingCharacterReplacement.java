@@ -22,9 +22,9 @@ public class LongestRepeatingCharacterReplacement {
             //update max frequency character to map
             maxFreq = Math.max(maxFreq, map.get(ch));
 
-            //Shrink window
+            //Check if window is invalid  (i.e too many replacements needed)
             if(windowSize - maxFreq > k){
-                //shrink window part
+                //shrink window from left 
                 char leftChar = s.charAt(left);
 
                 map.put(leftChar, map.get(leftChar)-1);

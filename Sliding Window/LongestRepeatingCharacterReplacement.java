@@ -35,6 +35,8 @@ public class LongestRepeatingCharacterReplacement {
                 }
                 left++;
             }
+
+            //update max length of valid window 
             maxLen = Math.max(maxLen, right-left+1);
         }
         return maxLen;

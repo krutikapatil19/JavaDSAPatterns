@@ -1,13 +1,13 @@
 public class MinimumSubarraySumLen {
     public static int minimumLengthSubarray(int[] arr,int target){
 
-        int left = 0;
-        int minLength = Integer.MAX_VALUE;
-        int targetSum = 0;
+        int left = 0;                           //start of window
+        int minLength = Integer.MAX_VALUE;      //store minimum length
+        int targetSum = 0;                      //current window sum
 
         for(int right = 0;right<arr.length;right++){
 
-           targetSum += arr[right];
+           targetSum += arr[right];             //add element to window (expand)
 
         // shrink window to find minimum length
         while(targetSum>=target){

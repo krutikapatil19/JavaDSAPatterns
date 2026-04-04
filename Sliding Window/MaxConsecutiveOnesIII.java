@@ -12,11 +12,11 @@ public class MaxConsecutiveOnesIII {
                 zeroesCount++;
             }
 
-            if(zeroesCount >k) {
+            while(zeroesCount >k) {
                 if(arr[left] ==0) {
                     zeroesCount--;
-                    left++;
                 }
+                left++;
             }
             maxLen = Math.max(maxLen, right - left + 1);
         }

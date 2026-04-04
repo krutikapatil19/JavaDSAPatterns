@@ -12,14 +12,15 @@ public class MinimumSubarraySumLen {
            //shrink window to find minimum length
             while(targetSum>=target){
 
-                //update minimum length
-                minLength = Math.min(minLength, right-left+1);
+            //update minimum length
+            minLength = Math.min(minLength, right-left+1);
     
-                //Remove element from left (shrink window)
-                targetSum -= arr[left];
-                left++;
+            //Remove element from left (shrink window)
+            targetSum -= arr[left];
+            left++;
             }
         }
+        //if no subarray found -> return 0
         return minLength == Integer.MAX_VALUE ? 0 : minLength;
     }
         public static void main(String[] args){

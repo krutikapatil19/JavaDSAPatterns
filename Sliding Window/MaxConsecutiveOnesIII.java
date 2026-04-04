@@ -18,6 +18,7 @@ public class MaxConsecutiveOnesIII {
                     left++;
                 }
             }
+            maxLen = Math.max(maxLen, right - left + 1);
         }
         return maxLen;
     }

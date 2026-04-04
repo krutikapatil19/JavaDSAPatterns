@@ -11,8 +11,6 @@ public class MaxConsecutiveOnesIII {
             if(arr[right] == 0) {
                 zeroesCount++;
             }
-            zeroesCount = right - left +1;
-
 
             if(zeroesCount >k) {
                 if(arr[left] ==0) {

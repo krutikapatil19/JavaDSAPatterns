@@ -9,6 +9,7 @@ public class MinimumSubarraySumLen {
 
            targetSum += arr[right];
 
+        // shrink window to find minimum length
         while(targetSum>=target){
             minLength = Math.min(minLength, right-left+1);
     

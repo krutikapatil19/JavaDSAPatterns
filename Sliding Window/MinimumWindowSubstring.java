@@ -29,22 +29,23 @@ public class MinimumWindowSubstring {
         
         while(formed == required){
 
+            //update smallest window 
             if(right - left + 1 <minLength){
                 minLength = right - left + 1;
                 startIndex = left;
             }
+            //removing left character(shrink window)
             char leftChar = s.charAt(left);
-            //shrink
             window.put(leftChar, window.get(leftChar) - 1);
+
 
             if(need.containsKey(leftChar) && window.get(leftChar) < need.get(leftChar)){
                 formed--;
             }
-            left++;
+            left++;     //move left pointer
         }
     }
     return minLength == Integer.MAX_VALUE ? "" : s.substring(startIndex, startIndex + minLength);
-
     }
     public static void main(String[] args){
         String s = "ADOBECODEBANC";

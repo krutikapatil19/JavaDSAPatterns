@@ -2,13 +2,13 @@ import java.util.HashMap;
 public class MinimumWindowSubstring {
     public static String minWindow(String s, String t){
 
-        int left = 0;
-        int formed = 0;
-        int minLength = Integer.MAX_VALUE;
-        int startIndex = 0;
+        int left = 0;                           //start of window
+        int formed = 0;                         //how many characters matched
+        int minLength = Integer.MAX_VALUE;      //smallest window length
+        int startIndex = 0;                     
         
-        HashMap<Character, Integer> need = new HashMap<>();
-        HashMap <Character,Integer> window = new HashMap<>();
+        HashMap<Character, Integer> need = new HashMap<>();         //what we need
+        HashMap <Character,Integer> window = new HashMap<>();       //what we have 
 
             for(char ch : t.toCharArray()){
                 need.put(ch, need.getOrDefault(ch, 0) + 1);
@@ -28,7 +28,7 @@ public class MinimumWindowSubstring {
         while(formed == required){
 
             if(right - left + 1 <minLength){
-                minLength = right - left +1;
+                minLength = right - left + 1;
                 startIndex = left;
             }
             char leftChar = s.charAt(left);

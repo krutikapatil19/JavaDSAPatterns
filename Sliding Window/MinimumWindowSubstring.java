@@ -10,11 +10,13 @@ public class MinimumWindowSubstring {
         HashMap<Character, Integer> need = new HashMap<>();         //what we need
         HashMap <Character,Integer> window = new HashMap<>();       //what we have 
 
+        //Build frequency map for String t
             for(char ch : t.toCharArray()){
                 need.put(ch, need.getOrDefault(ch, 0) + 1);
         }
-            int required = need.size();
+            int required = need.size();     //number of unique characters required
 
+        //Traverse string s using sliding window 
         for(int right = 0;right<s.length();right++){
 
             //taking current char

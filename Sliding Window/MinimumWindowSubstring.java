@@ -38,6 +38,7 @@ public class MinimumWindowSubstring {
             if(need.containsKey(leftChar) && window.get(leftChar) < need.get(leftChar)){
                 formed--;
             }
+            left++;
         }
     }
     return minLength == Integer.MAX_VALUE ? "" : s.substring(startIndex, startIndex + minLength);

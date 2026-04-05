@@ -20,6 +20,10 @@ public class MinimumWindowSubstring {
             //taking current char
             char ch = s.charAt(right);
             window.put(ch, window.getOrDefault(ch, 0) + 1); 
+
+            if(need.containsKey(ch) && window.get(ch).intValue() == need.get(ch).intValue()){
+                formed++;
+            }
         
         while(formed == required){
 

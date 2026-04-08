@@ -1,0 +1,24 @@
+import java.util.Math;
+public class MaximumProductSubarray {
+    public static int maxProduct(int[] nums){
+        int currMax = nums[0];
+        int currMin = nums[0];
+        int maxProduct = nums[0];
+
+        for(int i = 0;i<nums.length;i++){
+
+            int prevMax = currMax;
+            int prevMin = currMin;
+
+            currMax = Math.max(nums[i], Math.max( nums[i]*prevMax, nums[i]*prevMin));
+
+            currMin = Math.min(nums[i], Math.min( nums[i]*prevMax, nums[i]*prevMin));
+
+        }
+        return maxProduct;
+    }
+    public static void main(String[] args){
+        int[] nums = {2,3,-2,4};
+        System.out.println(maxProduct(nums));
+    }
+}

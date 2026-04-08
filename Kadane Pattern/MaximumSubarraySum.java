@@ -23,3 +23,5 @@ public class MaximumSubarraySum {
         System.out.println(maximumSumSubarray(nums));
     }
 }
+
+//Add currnt element , compare with maxSum , if greater ,then update maxSum , if negative then reset to 0 ,start from the next element.

@@ -14,6 +14,8 @@ public class MaximumProductSubarray {
 
             currMin = Math.min(nums[i], Math.min( nums[i]*prevMax, nums[i]*prevMin));
 
+            maxProduct = Math.max(maxProduct, currMax);
+
         }
         return maxProduct;
     }

@@ -1,10 +1,11 @@
 public class MinimumSubarraySum {
     public static int minimumSubarraySum(int[] nums){
-        int minSum = Integer.MAX_VALUE;
-        int currSum = 0;
+        int minSum = Integer.MAX_VALUE; //stores smallest sum found so far
+        int currSum = 0;                //current running sum
         for(int i = 0; i<nums.length; i++){
-            currSum += nums[i];
+            currSum += nums[i];         //add current element
 
+            //update minSum if current sum is smaller
             minSum = Math.min(currSum, minSum);
 
             if(currSum>0){

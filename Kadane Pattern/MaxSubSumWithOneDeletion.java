@@ -12,9 +12,8 @@ public class MaxSubSumWithOneDeletion {
             oneDeletionSum = Math.max(oneDeletionSum + nums[i], prevNoDeletion);
 
             noDeletionSum = Math.max(nums[i], noDeletionSum + nums[i]);
-            if(currSum>maxSum){
-                maxSum = currSum;
-            }
+
+            maxSum = Math.max(maxSum, Math.max(noDeletionSum, oneDeletionSum));
         }
         return maxSum;
     }

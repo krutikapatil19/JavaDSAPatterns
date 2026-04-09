@@ -1,8 +1,7 @@
 public class MaxSubSumWithOneDeletion {
     public static int maximumSum(int[] nums){
         int noDeletionSum = nums[0];
-        int oneDeletionSum = 0;
-        //int currSum = 0;
+        int oneDeletionSum = nums[0];
         int maxSum = nums[0];
 
         for(int i = 1;i<nums.length;i++){

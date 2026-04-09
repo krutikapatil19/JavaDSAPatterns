@@ -1,15 +1,20 @@
 public class MaxSubSumWithOneDeletion {
     public static int maximumSum(int[] nums){
-        int noDeletionSum = nums[0];
-        int oneDeletionSum = nums[0];
-        int maxSum = nums[0];
+
+        int noDeletionSum = nums[0];            //max Sum without deleting anything
+        int oneDeletionSum = nums[0];           //max Sum with ONE deletion used
+        int maxSum = nums[0];                   //overall best answerr 
 
         for(int i = 1;i<nums.length;i++){
 
-            int prevNoDeletion = noDeletionSum;
+            int prevNoDeletion = noDeletionSum; //store old value before update 
 
+
+            /*2 Choices: 
+            1.continue after deletion
+            2.delete current element (take prev noDeletion)
+            */
             oneDeletionSum = Math.max(oneDeletionSum + nums[i], prevNoDeletion);
-
             noDeletionSum = Math.max(nums[i], noDeletionSum + nums[i]);
 
             maxSum = Math.max(maxSum, Math.max(noDeletionSum, oneDeletionSum));

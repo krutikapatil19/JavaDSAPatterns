@@ -5,11 +5,11 @@ public class SubarraySumEqualsK {
 
     for(int i = 0; i<nums.length; i++){
 
-        int sum = 0;
+        int sum = 0;    //reset for each i
 
         for(int j = i; j<nums.length; j++){
 
-                sum += nums[j];
+                sum += nums[j];     //reuse previous sum
 
                 if(sum == k){
                     count++;

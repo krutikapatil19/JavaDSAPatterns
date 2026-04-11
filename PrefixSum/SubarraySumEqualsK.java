@@ -8,7 +8,7 @@ public class SubarraySumEqualsK {
         int sum = 0;    //reset for each i
         for(int j = i; j<nums.length; j++){
 
-                sum += nums[j];     //reuse previous sum
+                sum += nums[j];    //reuse previous sum
 
                 if(sum == k){
                     count++;

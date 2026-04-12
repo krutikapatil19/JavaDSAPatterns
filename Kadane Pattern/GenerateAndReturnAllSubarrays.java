@@ -14,6 +14,7 @@ public class GenerateAndReturnAllSubarrays {
                 for(int k = i; k<=j; k++){
                 sub.add(nums[k]);
             }
+            result.add(sub);
         }
     }
         return result;

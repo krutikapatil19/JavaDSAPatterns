@@ -4,7 +4,7 @@ public class GenerateAllSubarrays {
         for(int i = 0;i<nums.length; i++){          //i-> indicates start of subarray
             for(int j = i; j<nums.length; j++){     //j-> end of subarray
                  
-                for(int k = i; k<=j; k++){          //k -> traversal between i and j
+                for(int k = i; k<=j; k++){          //k ->traversal between i and j
                     System.out.print(nums[k] + " ");
                 }
                 System.out.println();

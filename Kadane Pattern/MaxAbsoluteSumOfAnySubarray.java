@@ -17,4 +17,8 @@ public class MaxAbsoluteSumOfAnySubarray {
         }
         return Math.max(Math.abs(maxSum), Math.abs(minSum));
     }
+    public static void main(String[] args){
+        int[] nums = {1,-3,2,3,-4};
+        System.out.println(maxAbsoluteSum(nums));
+    }
 }

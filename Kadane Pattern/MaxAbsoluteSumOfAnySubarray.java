@@ -14,7 +14,10 @@ public class MaxAbsoluteSumOfAnySubarray {
         //Traverse the array
         for(int i = 0;i<nums.length;i++){
             
+            //Either take current element OR extend previous subarray
             currMax = Math.max(nums[i], currMax+nums[i]);
+
+            //Update maximum sum found so far
             maxSum = Math.max(maxSum, currMax);
 
             currMin = Math.min(nums[i], currMin + nums[i]);

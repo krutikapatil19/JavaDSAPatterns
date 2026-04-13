@@ -20,9 +20,14 @@ public class MaxAbsoluteSumOfAnySubarray {
             //Update maximum sum found so far
             maxSum = Math.max(maxSum, currMax);
 
+            //Either take current element OR extend previous subarray(for min)
             currMin = Math.min(nums[i], currMin + nums[i]);
+
+            //Update minimum sum found so far
             minSum = Math.min(minSum, currMin);
         }
+
+        //return maximum absolute value between maxSum and minSum
         return Math.max(Math.abs(maxSum), Math.abs(minSum));
     }
     public static void main(String[] args){

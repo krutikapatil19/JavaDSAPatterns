@@ -1,12 +1,17 @@
 public class MaxAbsoluteSumOfAnySubarray {
     public static int maxAbsoluteSum(int[] nums){
 
-        int maxSum = 0;
+        //maxSum stores maximum subarray sum(positive side)
+        //minSum stores minimum subarray sum(negative side)
+        int maxSum = 0;     
         int minSum = 0;
 
+        //currMax - running sum for max subarray
+        //currMin - running sum for min subarray
         int currMax = 0;
         int currMin = 0;
 
+        //Traverse the array
         for(int i = 0;i<nums.length;i++){
             
             currMax = Math.max(nums[i], currMax+nums[i]);

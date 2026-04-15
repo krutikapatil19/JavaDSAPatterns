@@ -7,10 +7,14 @@ public class MaximumSumCircularSubarray {
         int currMin = 0, minSum = Integer.MAX_VALUE;
         for (int i = 0; i < nums.length; i++) {
 
+            // Total sum of array
             totalSum += nums[i];
+
+             // Normal Kadane (maximum subarray)
             currMax = Math.max(nums[i], currMax + nums[i]);
             maxSum = Math.max(maxSum, currMax);
 
+            // Reverse Kadane (minimum subarray)
             currMin = Math.min(nums[i], currMin + nums[i]);
             minSum = Math.min(minSum, currMin);
         }

@@ -18,6 +18,11 @@ public class MaximumSumCircularSubarray {
             currMin = Math.min(nums[i], currMin + nums[i]);
             minSum = Math.min(minSum, currMin);
         }
+
+        // edge case: if all elements are negative
+        if (maxSum < 0) {
+            return maxSum;
+        }
         return Math.max(maxSum, totalSum - minSum);
     }
 

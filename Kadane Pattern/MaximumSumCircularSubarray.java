@@ -23,6 +23,7 @@ public class MaximumSumCircularSubarray {
         if (maxSum < 0) {
             return maxSum;
         }
+        // Return max of normal and circular case
         return Math.max(maxSum, totalSum - minSum);
     }
 

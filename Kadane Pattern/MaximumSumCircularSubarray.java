@@ -5,6 +5,7 @@ public class MaximumSumCircularSubarray {
 
         int currMax = 0, maxSum = Integer.MIN_VALUE;
         int currMin = 0, minSum = Integer.MAX_VALUE;
+        
         for (int i = 0; i < nums.length; i++) {
 
             // Total sum of array

@@ -5,7 +5,7 @@ public class MaximumSumCircularSubarray {
 
         int currMax = 0, maxSum = Integer.MIN_VALUE;
         int currMin = 0, minSum = Integer.MAX_VALUE;
-        
+
         for (int i = 0; i < nums.length; i++) {
 
             // Total sum of array
@@ -19,7 +19,6 @@ public class MaximumSumCircularSubarray {
             currMin = Math.min(nums[i], currMin + nums[i]);
             minSum = Math.min(minSum, currMin);
         }
-
         // edge case: if all elements are negative
         if (maxSum < 0) {
             return maxSum;
@@ -29,7 +28,7 @@ public class MaximumSumCircularSubarray {
     }
 
     public static void main(String[] args) {
-        int[] nums = {5, -3, 5};
+        int[] nums = {5, -3, 5, 2};
         System.out.println(maxSubarraySumCircular(nums));
     }
 }

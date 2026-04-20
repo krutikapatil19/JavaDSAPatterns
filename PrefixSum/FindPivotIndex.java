@@ -1,4 +1,4 @@
-class Solution {
+public class findPivotIndex{
     public static int pivotIndex(int[] nums) {
         int totalSum = 0;
         

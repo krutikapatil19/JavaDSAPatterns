@@ -5,7 +5,6 @@ public class FindPivotIndex{
         for (int num : nums) {
             totalSum += num;
         }
-
         int leftSum = 0;
 
         for (int i = 0; i < nums.length; i++) {
@@ -15,7 +14,6 @@ public class FindPivotIndex{
             if (leftSum == rightSum) {
                 return i;
             }
-
             leftSum += nums[i];
         }
 

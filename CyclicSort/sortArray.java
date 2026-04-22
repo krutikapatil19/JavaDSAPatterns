@@ -4,6 +4,7 @@ public class sortArray {
         int i = 0;
 
         while (i < arr.length) {
+            // find correct index for current element
             int correctIndex = arr[i] - 1;
 
             // swap only if element is not at correct position

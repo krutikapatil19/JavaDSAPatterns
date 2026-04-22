@@ -6,7 +6,7 @@ public class sortArray {
         while (i < arr.length) {
             int correctIndex = arr[i] - 1;
 
-           
+            // swap only if element is not at correct position
             if (arr[i] != arr[correctIndex]) {
                 // swap
                 int temp = arr[i];
@@ -21,6 +21,7 @@ public class sortArray {
         int[] arr = {3, 1, 5, 4, 2};
 
         sortTheArray(arr);
+
         for (int num : arr) {
             System.out.print(num + " ");
         }

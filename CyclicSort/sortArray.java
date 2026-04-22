@@ -14,6 +14,7 @@ public class sortArray {
                 arr[i] = arr[correctIndex];
                 arr[correctIndex] = temp;
             } else {
+                // if already correct, then move ahead
                 i++;
             }
         }

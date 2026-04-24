@@ -30,3 +30,6 @@ public class sortArray {
     }
 }
 
+//Cyclic sort works only when elements are in a fixed range (1 to n).
+//Each element is placed at its correct index (value - 1).
+

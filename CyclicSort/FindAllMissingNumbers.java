@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 public class FindAllMissingNumbers {
-    public static List<Integer> sortingArray(int[] nums){
+    public static List<Integer> findMissingNumbers(int[] nums){
         int i = 0;
 
         List<Integer> result = new ArrayList<>();
@@ -28,7 +28,7 @@ public class FindAllMissingNumbers {
     }
     public static void main(String[] args){
         int[] nums = {4,3,2,7,8,2,3,1};
-        System.out.print(sortingArray(nums));
+        System.out.print(findMissingNumbers(nums));
     }
 }
 

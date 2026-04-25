@@ -3,11 +3,11 @@ public class MissingNumber {
         int n = nums.length;
 
          int actualSum = 0;
-         for(int i = 0;i<nums.length; i++){
-            actualSum += nums[i];
-         }
-
             int totalSum = n*(n+1)/2;
+
+            for(int i = 0;i< nums.length;i++){
+                actualSum += nums[i];
+            }
 
             int missingNumber = totalSum - actualSum;
     

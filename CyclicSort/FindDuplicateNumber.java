@@ -17,7 +17,7 @@ public class FindDuplicateNumber {
         return slow;
     }
     public static void main(String[] args){
-        int[] nums = {2,3,3,4,6};
+        int[] nums = {1,3,4,2,2};
         System.out.println(findDuplicate(nums));
     }
 }

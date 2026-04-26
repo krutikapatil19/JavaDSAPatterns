@@ -1,19 +1,24 @@
 public class FindDuplicateNumber {
     public static int findDuplicate(int[] nums){
+
+        //Initialize two pointers - fast and slow pointer
         int slow = nums[0];
         int fast = nums[0];
 
+        //Detect cycle - check where they meet
         do{
-            slow = nums[slow];
-            fast = nums[nums[fast]];
-        } while (slow != fast);
-
+            slow = nums[slow];          //moves 1 step
+            fast = nums[nums[fast]];    //move 2 steps
+        } 
+        while (slow != fast);
+        //find entry point of cycle 
         slow = nums[0];
 
         while(slow != fast) {
-            slow = nums[slow];
-            fast = nums[fast];
+            slow = nums[slow];      //move 1 step 
+            fast = nums[fast];      //move 2 step
         }
+        //duplicate number
         return slow;
     }
     public static void main(String[] args){
@@ -21,3 +26,5 @@ public class FindDuplicateNumber {
         System.out.println(findDuplicate(nums));
     }
 }
+
+//Floyd's Cycle Detection Approach used

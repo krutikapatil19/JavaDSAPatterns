@@ -19,13 +19,14 @@ public class FindAllDuplicates {
             } else {
                 i++;
             }
+        }
 
             for(int j = 0; j< nums.length; j++){
                 if(nums[j] != j + 1){
                     result.add(nums[j]);
                 }
             }
-        }
+        
             return result;
         }
     public static void main(String[] args){

@@ -8,9 +8,15 @@ public class FindAllDuplicates {
         List<Integer> result = new ArrayList<>();
 
         while(i < nums.length){
-            
-            int correctIndex = nums[i] - 1;
 
+            int correctIndex = nums[i] - 1;
+            if(nums[i] != nums[correctIndex]) {
+                //swap
+            } else {
+                //check if its duplicate
+            }
+            
+            
             if(nums[i] != nums[correctIndex]) {
 
                 int temp = nums[i];

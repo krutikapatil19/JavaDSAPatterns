@@ -10,12 +10,6 @@ public class FindAllDuplicates {
         while(i < nums.length){
 
             int correctIndex = nums[i] - 1;
-            if(nums[i] != nums[correctIndex]) {
-                //swap
-            } else {
-                //check if its duplicate
-            }
-            
             
             if(nums[i] != nums[correctIndex]) {
 
@@ -23,15 +17,12 @@ public class FindAllDuplicates {
                 nums[i] = nums[correctIndex];
                 nums[correctIndex] = temp;
             } else {
+                 if(i != correctIndex){
+                  result.add(nums[i]);
+            }
                 i++;
             }
         }
-
-            for(int j = 0; j< nums.length; j++){
-                if(nums[j] != j + 1 && !result.contains(nums[j])){
-                    result.add(nums[j]);
-                }
-            }
             return result;
         }
     public static void main(String[] args){

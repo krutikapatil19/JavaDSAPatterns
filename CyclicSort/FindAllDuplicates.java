@@ -17,7 +17,7 @@ public class FindAllDuplicates {
                 nums[i] = nums[correctIndex];
                 nums[correctIndex] = temp;
             } else {
-                 if(i != correctIndex){
+                 if(i != correctIndex && !result.contains(nums[i])){
                   result.add(nums[i]);
             }
                 i++;

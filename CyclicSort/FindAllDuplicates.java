@@ -22,11 +22,10 @@ public class FindAllDuplicates {
         }
 
             for(int j = 0; j< nums.length; j++){
-                if(nums[j] != j + 1){
+                if(nums[j] != j + 1 && !result.contains(nums[j])){
                     result.add(nums[j]);
                 }
             }
-        
             return result;
         }
     public static void main(String[] args){

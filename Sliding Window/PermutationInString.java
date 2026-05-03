@@ -15,7 +15,7 @@ public class PermutationInString {
 
         int k = s1.length();
         for(int i = 0; i<k; i++){
-            window[s2.charAt(i) - 'a'];
+            window[s2.charAt(i) - 'a']++;
         }
 
         if(matches(need, window)) return true;

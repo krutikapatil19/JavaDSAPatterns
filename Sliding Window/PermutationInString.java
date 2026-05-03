@@ -25,17 +25,23 @@ public class PermutationInString {
         //Check first window
         if(matches(need, window)) return true;
 
+        //Slide Window
         for(int i = k; i<s2.length(); i++){
 
+            //Add New character
             window[s2.charAt(i) - 'a']++;
 
+            //remove leftmost character
             window[s2.charAt(i-k) - 'a']--;
 
+            //Check after update
             if(matches(need, window))return true;
         }
+        //No match found 
         return false;
     }
 
+    //function for comparing both freq arrays
     public static boolean matches(int[] a, int[] b){ 
         for(int i = 0; i<26; i++){
             if(a[i] !=b[i]) return false ;

@@ -54,3 +54,5 @@ public class PermutationInString {
         System.out.println(checkInclusion(s1, s2));
     }
 }
+
+//Eg. Take a box of size 2 (i.e of the size s1) , and keep shifting it , ,and check if its content matches s1.

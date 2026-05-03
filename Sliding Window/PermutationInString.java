@@ -31,7 +31,7 @@ public class PermutationInString {
         return false;
     }
 
-    public boolean matches(int[]a , int[] b){
+    public static boolean matches(int[] a, int[] b){ 
         for(int i = 0; i<26; i++){
             if(a[i] !=b[i]) return false ;
         }
@@ -40,6 +40,6 @@ public class PermutationInString {
     public static void main(String[] args){
         String s1 = "ab";
         String s2 = "eidbaooo";
-        System.out.println(checkInclusion(a,b));
+        System.out.println(checkInclusion(s1, s2));
     }
 }

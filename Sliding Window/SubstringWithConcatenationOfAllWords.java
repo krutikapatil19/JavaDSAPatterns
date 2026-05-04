@@ -6,8 +6,17 @@ public class SubstringWithConcatenationOfAllWords {
 
         List<Integer> result = new ArrayList<>();
 
-        if(s.length()== 0|| words.length == 0) return result;
+        if(s1.length()== 0|| words.length == 0) return result;
 
+        int wordLen = words[0].length();
+        int wordCount = words.length;
+        int totalLen = wordLen * wordCount;
+
+        Map<String, Integer>need = new HashMap<>();
+
+        for(int i = 0; i< wordLen; i++) {
+            //sliding window logic 
+        }
 
     } 
     public static void main(String[] args){

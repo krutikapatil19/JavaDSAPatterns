@@ -40,7 +40,7 @@ public class SubstringWithConcatenationOfAllWords {
                 count ++;
 
             //Shrink
-            while(window.get(word) > need.get(word)){
+            while(window.get(word) != null && window.get(word) > need.get(word)){
 
                 String leftWord = s1.substring(left, left+ wordLen);
                 window.put(leftWord, window.get(leftWord) - 1);

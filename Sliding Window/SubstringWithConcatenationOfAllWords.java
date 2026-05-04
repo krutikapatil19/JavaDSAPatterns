@@ -12,7 +12,7 @@ public class SubstringWithConcatenationOfAllWords {
 
         int wordLen = words[0].length();
         int wordCount = words.length;
-        int totalLen = wordLen * wordCount;
+        //int totalLen = wordLen * wordCount;
 
         Map<String, Integer>need = new HashMap<>();
 
@@ -29,16 +29,35 @@ public class SubstringWithConcatenationOfAllWords {
 
             int count = 0;
         
-        
         while(right + wordLen <= s1.length()){
 
             String word = s1.substring(right, right + wordLen);
 
             right += wordLen;
+
+            if(need.containsKey(word)){
+                window.put(word, window.getOrDefault(word, 0) + 1);
+                count ++;
+
+            //Shrink
+            while(window.get(word) > need.get(word)){
+
+                String leftWord = s1.substring(left, left+ wordLen);
+                window.put(leftWord, window.get(leftWord) - 1);
+                count--;
+                left += wordLen;
+            }
+        }
+
+            //valid case
+            if(count == wordCount){
+                result.add(left);
+            }
         }
     }
+    return result;
 
-    } 
+    }
     public static void main(String[] args){
         String s1 = "barfoothefoobarman";
         String[] words = {"foo","bar"};

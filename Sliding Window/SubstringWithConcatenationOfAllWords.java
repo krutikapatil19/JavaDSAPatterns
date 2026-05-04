@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SubstringWithConcatenationOfAllWords {
     public List<Integer> findSubstring (String s1, String[] words){
@@ -16,6 +18,8 @@ public class SubstringWithConcatenationOfAllWords {
 
         for(int i = 0; i< wordLen; i++) {
             //sliding window logic 
+            int left = i;
+            int right = i;
         }
 
     } 

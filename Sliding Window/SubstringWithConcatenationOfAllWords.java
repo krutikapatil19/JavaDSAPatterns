@@ -16,6 +16,10 @@ public class SubstringWithConcatenationOfAllWords {
 
         Map<String, Integer>need = new HashMap<>();
 
+        for(String word: words){
+            need.put(word, need.getOrDefault(word, 0) + 1);
+        }
+
         for(int i = 0; i< wordLen; i++) {
             //sliding window logic 
             int left = i;

@@ -50,9 +50,9 @@ public class SubstringWithConcatenationOfAllWords {
             //if word is valid 
             if(need.containsKey(word)){
 
-                //add word to window
-                window.put(word, window.getOrDefault(word, 0) + 1);
-                count ++;
+            //add word to window
+            window.put(word, window.getOrDefault(word, 0) + 1);
+            count ++;
 
             //Shrink window if word appears extra times 
             while(window.get(word) != null && window.get(word) > need.get(word)){
@@ -76,11 +76,9 @@ public class SubstringWithConcatenationOfAllWords {
             count = 0;
             left = right;
         }
-            
-        }
     }
+}
     return result;
-
     }
     public static void main(String[] args){
         String s1 = "barfoothefoobarman";

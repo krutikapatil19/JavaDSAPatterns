@@ -47,12 +47,16 @@ public class SubstringWithConcatenationOfAllWords {
                 count--;
                 left += wordLen;
             }
-        }
-
             //valid case
             if(count == wordCount){
                 result.add(left);
             }
+        } else {
+            window.clear();
+            count = 0;
+            left = right;
+        }
+            
         }
     }
     return result;

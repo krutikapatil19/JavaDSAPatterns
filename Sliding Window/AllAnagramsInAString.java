@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 public class AllAnagramsInAString {
-    public static List<String> findAnagrams(String s, String p){
+    public static List<Integer> findAnagrams(String s, String p){
 
         List<Integer> result = new ArrayList<>();
 

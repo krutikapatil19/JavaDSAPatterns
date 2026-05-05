@@ -34,7 +34,6 @@ public class AllAnagramsInAString {
         //slide window 
         for(int i = k; i< s.length(); i++){
             //add
-
             window[s.charAt(i) - 'a']++;
 
             //remove

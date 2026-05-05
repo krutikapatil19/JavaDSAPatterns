@@ -48,6 +48,7 @@ public class AllAnagramsInAString {
             
         return result;
     }
+    //compare both frequency arrays
     public static boolean matches(int[] a, int[] b) {
                 for(int i = 0; i<26; i++){
                     if(a[i] != b[i]) return false;

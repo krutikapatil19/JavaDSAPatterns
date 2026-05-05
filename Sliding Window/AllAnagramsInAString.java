@@ -11,12 +11,13 @@ public class AllAnagramsInAString {
 
         //need -> freq of p
         int[] need = new int[26];
+
         //window -> freq of current window in s
         int[] window = new int[26];
 
         //fill need array from p 
         for(char c: p.toCharArray()){
-            need[c-'a']++;
+            need[c - 'a']++;
         }
 
         int k = p.length(); //window size 
@@ -30,7 +31,7 @@ public class AllAnagramsInAString {
         if(matches(need, window)){
             result.add(0);
         }
-        
+
         //slide window 
         for(int i = k; i< s.length(); i++){
 

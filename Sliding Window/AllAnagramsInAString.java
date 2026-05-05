@@ -14,20 +14,24 @@ public class AllAnagramsInAString {
         //window -> freq of current window in s
         int[] window = new int[26];
 
+        //fill need array
         for(char c: p.toCharArray()){
             need[c-'a']++;
         }
 
-        int k = p.length();
+        int k = p.length(); //window size 
 
+        //build first window 
         for(int i = 0;i<k;i++){
             window[s.charAt(i) - 'a']++;
         }
 
+        //check first window 
         if(matches(need, window)){
             result.add(0);
         }
 
+        //slide window 
         for(int i = k; i< s.length(); i++){
             //add
 

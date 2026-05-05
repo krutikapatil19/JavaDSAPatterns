@@ -50,7 +50,7 @@ public class AllAnagramsInAString {
                 for(int i = 0; i<26; i++){
                     if(a[i] != b[i]) return false;
                 }
-                return true;
+            return true;
         }
     public static void main(String[] args){
         String s = "cbaebabacd";

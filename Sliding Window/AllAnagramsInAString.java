@@ -30,7 +30,6 @@ public class AllAnagramsInAString {
         if(matches(need, window)){
             result.add(0);
         }
-
         //slide window 
         for(int i = k; i< s.length(); i++){
 
@@ -40,12 +39,11 @@ public class AllAnagramsInAString {
             //remove old character(leftmost)
             window[s.charAt(i - k) - 'a']--;
 
-            //check if window matches
+            //check if window matches p
             if(matches(need, window)){
                 result.add(i-k+1);
             }
         }
-            
         return result;
     }
     //compare both frequency arrays

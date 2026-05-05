@@ -36,6 +36,13 @@ public class AllAnagramsInAString {
             if(matches(need, window)){
                 result.add(i-k+1);
             }
+
+            public boolean matches(int[] a, int[] b) {
+                for(int i = 0; i<26; i++){
+                    if(a[i] != b[i]) return false;
+                }
+                return true;
+            }
         }
     }
     public static void main(String[] args){

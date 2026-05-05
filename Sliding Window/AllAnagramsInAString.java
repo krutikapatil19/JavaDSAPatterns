@@ -6,7 +6,7 @@ public class AllAnagramsInAString {
         //store all starting indices
         List<Integer> result = new ArrayList<>();
 
-        //edge case
+        //edge case - if p is bigger -> no possible window 
         if(s.length() < p.length()) return result;
 
         //need -> freq of p
@@ -14,7 +14,7 @@ public class AllAnagramsInAString {
         //window -> freq of current window in s
         int[] window = new int[26];
 
-        //fill need array
+        //fill need array from p 
         for(char c: p.toCharArray()){
             need[c-'a']++;
         }
@@ -25,7 +25,6 @@ public class AllAnagramsInAString {
         for(int i = 0;i<k;i++){
             window[s.charAt(i) - 'a']++;
         }
-
         //check first window 
         if(matches(need, window)){
             result.add(0);
@@ -52,7 +51,6 @@ public class AllAnagramsInAString {
                     if(a[i] != b[i]) return false;
                 }
                 return true;
-            
         }
     public static void main(String[] args){
         String s = "cbaebabacd";

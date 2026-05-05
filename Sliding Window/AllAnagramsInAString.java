@@ -19,6 +19,24 @@ public class AllAnagramsInAString {
         for(int i = 0;i<k;i++){
             window[s.charAt(i) - 'a']++;
         }
+
+        if(matches(need, window)){
+            result.add(0);
+        }
+
+        for(int i = k; i< s.length(); i++){
+            //add
+
+            window[s.charAt(i) - 'a']++;
+
+            //remove
+            window[s.charAt(i - k) - 'a']--;
+
+            //check match
+            if(matches(need, window)){
+                result.add(i-k+1);
+            }
+        }
     }
     public static void main(String[] args){
         String s = "cbaebabacd";

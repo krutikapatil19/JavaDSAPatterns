@@ -3,11 +3,15 @@ import java.util.List;
 public class AllAnagramsInAString {
     public static List<Integer> findAnagrams(String s, String p){
 
+        //store all starting indices
         List<Integer> result = new ArrayList<>();
 
+        //edge case
         if(s.length() < p.length()) return result;
 
+        //need -> freq of p
         int[] need = new int[26];
+        //window -> freq of current window in s
         int[] window = new int[26];
 
         for(char c: p.toCharArray()){

@@ -33,13 +33,14 @@ public class AllAnagramsInAString {
 
         //slide window 
         for(int i = k; i< s.length(); i++){
-            //add
+
+            //add new character(right side)
             window[s.charAt(i) - 'a']++;
 
-            //remove
+            //remove old character(leftmost)
             window[s.charAt(i - k) - 'a']--;
 
-            //check match
+            //check if window matches
             if(matches(need, window)){
                 result.add(i-k+1);
             }

@@ -1,5 +1,4 @@
-
-public class binarySeach {
+public class BinarySearch {
     public static int search(int[] nums, int target) {
         
         int left = 0;       //starting index 
@@ -15,6 +14,7 @@ public class binarySeach {
             if (nums[mid] == target) {
                 return mid;
             }
+            
             //if target is bigger -> then search in right half
             else if (nums[mid] < target) {
                 left = mid + 1;

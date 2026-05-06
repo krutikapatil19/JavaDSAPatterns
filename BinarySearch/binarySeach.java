@@ -15,13 +15,16 @@ public class binarySeach {
             if (nums[mid] == target) {
                 return mid;
             }
+            //if target is bigger -> then search in right half
             else if (nums[mid] < target) {
                 left = mid + 1;
             }
+            //if target is smaller -> search in the left half 
             else {
                 right = mid - 1;
             }
         }
+        //target not found
         return -1;
     }
     public static void main(String[] args){

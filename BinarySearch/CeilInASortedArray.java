@@ -14,10 +14,10 @@ public class CeilInASortedArray {
                 ans = nums[mid];
                 return mid;
             } else {
-                right = mid -1;
+                left = mid +1;
             }
         }
-        return -1;
+        return ans;
     }
     public static void main(String[] args){
         int[] nums = {1, 2, 8, 10, 11, 12, 19};

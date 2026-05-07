@@ -1,5 +1,5 @@
 public class CeilInASortedArray {
-    public int static findCloseMaxNumber(int[] nums, int target){
+    public static int findCloseMaxNumber(int[] nums, int target){
 
         int ans = -1;
 
@@ -12,7 +12,7 @@ public class CeilInASortedArray {
 
             if(nums[mid] >= target){
                 ans = nums[mid];
-                return mid;
+                right = mid - 1;
             } else {
                 left = mid +1;
             }

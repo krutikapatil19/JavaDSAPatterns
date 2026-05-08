@@ -16,7 +16,7 @@ public class CeilInASortedArray {
         //find middle index 
         int mid = left+ (right-left)/2;
 
-        //if current number is greater than or equal to target
+            //if current number is greater than or equal to target
             if(nums[mid] >= target){
 
                 //store possible answer
@@ -25,6 +25,7 @@ public class CeilInASortedArray {
                 //search left side for smaller valid answer
                 right = mid - 1;
             } 
+            
             //if current number is smaller than target 
             else {
 

@@ -75,7 +75,6 @@ public class FirstAndLastPositionOfElementInSortedArray {
                 // search on right side
                 left = mid + 1;
             }
-
             // move right
             else if(nums[mid] < target) {
                 left = mid + 1;
@@ -86,10 +85,8 @@ public class FirstAndLastPositionOfElementInSortedArray {
                 right = mid - 1;
             }
         }
-
         return ans;
     }
-
     public static void main(String[] args) {
 
         int[] nums = {5, 7, 7, 8, 8, 8, 10};

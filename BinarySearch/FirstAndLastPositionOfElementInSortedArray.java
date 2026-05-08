@@ -52,11 +52,13 @@ public class FirstAndLastPositionOfElementInSortedArray {
         return ans;
     }
 
+    // function to find last occurrence
     public static int findLast(int[] nums, int target) {
 
         int left = 0;
         int right = nums.length - 1;
 
+        // store answer
         int ans = -1;
 
         while(left <= right) {

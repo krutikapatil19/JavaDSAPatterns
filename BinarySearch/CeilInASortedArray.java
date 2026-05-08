@@ -24,15 +24,14 @@ public class CeilInASortedArray {
 
                 //search left side for smaller valid answer
                 right = mid - 1;
-
-                //if current number is smaller than target
-            } else {
+            } 
+            //if current number is smaller than target 
+            else {
 
                 //move to right side
                 left = mid +1;
             }
         }
-
         //return final ceil
         return ans;
     }

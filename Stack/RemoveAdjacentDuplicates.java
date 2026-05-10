@@ -15,6 +15,7 @@ public class RemoveAdjacentDuplicates {
                 sb.deleteCharAt(len - 1);
             }
             else {
+                //otherwise add current character
                 sb.append(ch);
             }
         }

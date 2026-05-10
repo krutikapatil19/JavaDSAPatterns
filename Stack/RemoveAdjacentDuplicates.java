@@ -1,5 +1,5 @@
 public class RemoveAdjacentDuplicates {
-    public String removeDuplicates(String s) {
+    public static String removeDuplicates(String s) {
 
         StringBuilder sb = new StringBuilder();
 
@@ -17,5 +17,9 @@ public class RemoveAdjacentDuplicates {
         }
 
         return sb.toString();
+    }
+    public static void main(String[] args){
+        String s = "abbaca";
+        System.out.println(removeDuplicates(s));
     }
 }

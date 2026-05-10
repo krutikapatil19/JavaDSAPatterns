@@ -1,10 +1,13 @@
 public class RemoveAdjacentDuplicates {
     public static String removeDuplicates(String s) {
 
+        //String builder works like a stack 
         StringBuilder sb = new StringBuilder();
 
+        //Traverse each character
         for(char ch : s.toCharArray()) {
 
+            //current length of String builder
             int len = sb.length();
 
             // if last character is same, remove it

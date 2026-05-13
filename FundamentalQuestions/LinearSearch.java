@@ -5,15 +5,13 @@ public class LinearSearch{
         for(i = 0;i<nums.length; i++){
             if(nums[i]==target){
                 return i;
-            } else {
-                continue;
             }
         }
         return -1;
     }
     public static void main(String[] args){
         int[] nums = {3,4,10,12,15};
-        int target = 1;
+        int target = 12;
         System.out.println(linearsearchh(nums, target));
     }
 }

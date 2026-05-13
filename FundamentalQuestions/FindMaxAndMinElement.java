@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class FindMaxAndMinElement {
     public static int[] findMaximumAndMinimumElement(int[] nums){
 

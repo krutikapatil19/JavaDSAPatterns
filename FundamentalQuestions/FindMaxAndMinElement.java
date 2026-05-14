@@ -1,6 +1,6 @@
 import java.util.Arrays;
 public class FindMaxAndMinElement {
-    public static int[] findMaximumAndMinimumElement(int[] nums){
+    public static int[] findMaxMinElement(int[] nums){
 
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
@@ -15,10 +15,11 @@ public class FindMaxAndMinElement {
         }
 
         int[] maxAndMin = {max,min};            //an array to store max and min element 
-        return maxAndMin;
+       return maxAndMin;
     }
     public static void main(String[] args){
         int[] nums = {2,10,12,20,190};
-        System.out.println("The max and min numbers in the array are : " + Arrays.toString(findMaximumAndMinimumElement(nums)) + " respectively.");
+        int[] answer = findMaxMinElement(nums);
+        System.out.println("Maximum = " + answer[0] + " and " + "Minimum = "  + answer[1]);
     }
 }

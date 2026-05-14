@@ -2,10 +2,11 @@ import java.util.Arrays;
 public class ReverseArray {
     public static int[] reverse(int[]nums){
 
-        int i = 0;
+        //Used two-pointer approach here , i and j , i is the start of the array and j is the end element of array , loop will run until i crosses j, and along with that swapping of i and j index numbers will happen.
+        int i = 0;              
         int j = nums.length-1;
 
-        while(i<=j){
+        while(i<j){
             int temp = nums[i];
             nums[i] = nums[j];
             nums[j] = temp;

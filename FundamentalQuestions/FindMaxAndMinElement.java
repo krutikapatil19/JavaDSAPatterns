@@ -4,21 +4,21 @@ public class FindMaxAndMinElement {
 
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
-                
+
         for(int i = 0;i<nums.length; i++){
-            if(nums[i]<min){
+            if(nums[i]<min){                    //if current number is lesser than min, then update min 
                 min = nums[i];
             } 
-            else if(nums[i]>max){
+            if(nums[i]>max){                    //if current number is greater than max , then update max
                 max = nums[i];
             }
         }
 
-        int[] maxAndMin = {max,min};
+        int[] maxAndMin = {max,min};            //an array to store max and min element 
         return maxAndMin;
     }
     public static void main(String[] args){
         int[] nums = {2,10,12,20,190};
-        System.out.println(Arrays.toString(findMaximumAndMinimumElement(nums)));
+        System.out.println("The max and min numbers in the array are : " + Arrays.toString(findMaximumAndMinimumElement(nums)) + " respectively.");
     }
 }

@@ -4,9 +4,7 @@ public class FindMaxAndMinElement {
 
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
-
-        int[] maxAndMin = {max,min};
-        
+                
         for(int i = 0;i<nums.length; i++){
             if(nums[i]<min){
                 min = nums[i];
@@ -15,6 +13,8 @@ public class FindMaxAndMinElement {
                 max = nums[i];
             }
         }
+
+        int[] maxAndMin = {max,min};
         return maxAndMin;
     }
     public static void main(String[] args){

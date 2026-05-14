@@ -2,7 +2,7 @@ import java.util.Arrays;
 public class ReverseArray {
     public static int[] reverse(int[]nums){
 
-        int i = nums[0];
+        int i = 0;
         int j = nums.length-1;
 
         while(i<=j){

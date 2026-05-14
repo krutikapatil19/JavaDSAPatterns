@@ -1,7 +1,7 @@
 public class PalindromeCheck {
     public static boolean isPalindrome(String s){
 
-        //used two pointers , i and j , i starts at the beginning ,and j starts at end of array , they will traverse towards each other and loop will run until i crosses j , along with that we will compare the char at i and j are equal or not.
+        //used two pointers , i and j , i starts at the beginning ,and j starts at end of string, they will traverse towards each other and loop will run until i crosses j , along with that we will compare the char at i and j are equal or not.
         int i = 0;
         int j = s.length() - 1;
 

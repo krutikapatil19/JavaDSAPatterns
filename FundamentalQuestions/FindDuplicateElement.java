@@ -13,7 +13,7 @@ public class FindDuplicateElement {
                 set.add(nums[i]);
             }
         }
-        return -1;
+        return duplicates;
     }
     public static void main(String[] args){
         int[] nums = {3,5,9,9,11};

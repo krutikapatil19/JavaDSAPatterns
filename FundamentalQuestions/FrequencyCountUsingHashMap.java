@@ -11,14 +11,9 @@ public class FrequencyCountUsingHashMap {
         //Loop through each element in array (we can also use modified for loop)
         for(int i = 0; i<nums.length; i++){
 
-            //if number already exists , increase count by 1 
-            if(freqCount.containsKey(nums[i])){
-                freqCount.put(nums[i], freqCount.get(nums[i]) + 1);
 
-                //if number doesnt exist in map , then put 1.
-            } else {
-                freqCount.put(nums[i], 1);
-            }
+            freqCount.put(nums[i], freqCount.getOrDefault(nums[i], 0) + 1);
+            //if number already exists , increase count by 1 
         }
         return freqCount;
     }

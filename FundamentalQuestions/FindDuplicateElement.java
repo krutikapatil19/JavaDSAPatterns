@@ -3,10 +3,12 @@ public class FindDuplicateElement {
     public static int duplicateNumber(int[] nums){
 
         HashSet<Integer> set = new HashSet<>();
-        for(int i = 0;i<nums.length; i++){
 
+        HashSet<Integer> duplicates = new HashSet<>();
+        for(int i = 0;i<nums.length; i++){
+            
             if(set.contains(nums[i])){
-                return nums[i];
+                duplicates.add(nums[i]);
             } else {
                 set.add(nums[i]);
             }

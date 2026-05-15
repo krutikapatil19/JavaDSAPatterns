@@ -1,4 +1,3 @@
-import java.util.Map;
 import java.util.HashSet;
 public class FindDuplicateElement {
     public static int duplicateNumber(int[] nums){
@@ -12,9 +11,10 @@ public class FindDuplicateElement {
                 set.add(nums[i]);
             }
         }
+        return -1;
     }
     public static void main(String[] args){
-        int[] nums = {3,5,5,9,11};
+        int[] nums = {3,5,9,9,11};
         System.out.println(duplicateNumber(nums));
     }
 }

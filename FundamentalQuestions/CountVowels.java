@@ -1,9 +1,13 @@
 public class CountVowels {
     public static int vowelsCount(String s){
 
+        //counter initialization - to keep count of vowels
         int count = 0;
+
         for(int i = 0;i<s.length();i++){
-            if(s.charAt(i)=='a' || s.charAt(i)=='e' || s.charAt(i)=='i' || s.charAt(i)=='o' || s.charAt(i)=='u'){
+
+            char ch = s.charAt(i);
+            if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
                 count++;
             }
         }

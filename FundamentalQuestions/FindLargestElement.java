@@ -1,7 +1,7 @@
 public class FindLargestElement {
     public static int findLargestNumber(int[] nums){
 
-        int max = 0;
+        int max = Integer.MIN_VALUE;
         for(int i = 0;i<nums.length; i++){
             if(nums[i]>max){
                 max = nums[i];

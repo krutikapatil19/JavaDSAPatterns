@@ -2,8 +2,9 @@ public class SecondLargestNumberInArray{
 
     public static int findSecondLargest(int[] nums){
 
-        int max = Integer.MIN_VALUE;
-        int secondMax = Integer.MIN_VALUE;
+        int max = Integer.MIN_VALUE;        //variable to store largest number 
+        int secondMax = Integer.MIN_VALUE;      //variable to store secondLargest number 
+        
         for(int i = 0;i<nums.length; i++){
         
             if(nums[i]>max){

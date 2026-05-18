@@ -6,7 +6,7 @@ public class RemoveDuplicatesFromSortedArray {
         int j = 0;  //points to whre the next unique element should go 
 
         for( i = 1;i<nums.length; i++){
-            if(nums[i]!= nums[j]){          //checks if adjacent numbers are not equal , if unique then stored at j'th position
+            if(nums[i]!= nums[j]){          //checks if adjacent numbers are not equal , if unique then stored at j+1 position
                nums[j+1] = nums[i];
                j++;
             }

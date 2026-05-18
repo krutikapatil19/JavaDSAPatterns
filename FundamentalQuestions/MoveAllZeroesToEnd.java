@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class MoveAllZeroesToEnd{
 
     public static int[] movingZeroestoEnd(int[]nums){
@@ -18,6 +19,6 @@ public class MoveAllZeroesToEnd{
     }
     public static void main(String[] args){
         int[] nums = {10,2,0,54,0,0,62};
-        System.out.println(movingZeroestoEnd(nums));
+        System.out.println(Arrays.toString(movingZeroestoEnd(nums)));
     }
 }

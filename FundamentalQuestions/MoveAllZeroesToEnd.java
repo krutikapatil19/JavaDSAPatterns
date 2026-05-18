@@ -3,7 +3,7 @@ public class MoveAllZeroesToEnd{
 
     public static int[] movingZeroestoEnd(int[]nums){
 
-        //Using two-pointer approach , i keeps track of zeroes elements , and j points to where the next non-zero element should go.
+        //Using two-pointer approach , i keeps track of zero elements , and j points to where the next non-zero element should go.
         int i = 0;
         int j = 0;
 

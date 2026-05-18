@@ -3,22 +3,21 @@ public class MoveAllZeroesToEnd {
     public static int[] moveZeroes(int[]nums){
 
         int i = 0;
-        int j = nums.length-1;
+        int j = 0;
 
-       for(i = 0; i< nums.length-1; i++){
-        //for(i = 0;i<nums.length ; i++){
-            if(nums[i]==0){
-                //swap with j 
-                int temp = nums[i];
-                nums[i] = nums[j];
-                nums[j]= temp;
-                j--;
-            }
+       for(i = 0; i<nums.length; i++){
+    
+        if(nums[i] != 0){
+            //placing it at correct position(j)
+            nums[j] = nums[i];
+            j++;
+            
         }
+    }
         return nums;
     }
     public static void main(String[] args){
-        int[] nums = {10,0,2,0,0,25};
+        int[] nums = {0,10,20,0};
         System.out.println(Arrays.toString(moveZeroes(nums)));
     }
 }

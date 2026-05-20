@@ -13,6 +13,8 @@ public class FindFirstAndLastPosition {
 
             //check if current element matches target
             if(nums[i] == target){
+
+                //store first occurrence only once
                 if(firstOccurence == -1){
                     firstOccurence = i;
                 }

@@ -7,17 +7,20 @@ public class ValidAnagram {
         int j = 0;
         if(s1.length()!= s2.length())return false;
 
+        //lowercase
+        s1 = s1.toLowerCase();
+        s2 = s2.toLowerCase();
+
         HashMap<Character,Integer> map = new HashMap<>();
 
-        char ch = s1.charAt(i);
-
-        map.put(ch, getOrDefault(ch, 0)+1);
-
-        for( i = 0; i<s2.length(); i++){
-            if(!Map.containsKey(i)){
-                return false;
-            }
+        for(char ch : s1.toCharArray()){
+            map.put(ch, map.getOrDefault(ch, 0)+1);
         }
+
+        for(char ch : s2.toCharArray()) {
+            if(!map.containsKey(ch)) return fasle;
+        }
+
         return true;
     }
     public static void main(String[] args){

@@ -1,10 +1,14 @@
 import java.util.Arrays;
 public class FindFirstAndLastPosition {
+
+    //method to find first and last occurrence of target
     public static int[] searchRange(int[]nums , int target){
 
+        //initially set both positions as -1
         int firstOccurence = -1;
         int lastOccurence = -1;
 
+        //traverse the array
         for(int i = 0;i<nums.length; i++){
             if(nums[i] == target){
                 if(firstOccurence == -1){

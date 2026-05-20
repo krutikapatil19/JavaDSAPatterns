@@ -12,10 +12,17 @@ public class ValidAnagram {
         HashMap<Character,Integer> map = new HashMap<>();
 
         for(char ch : s1.toCharArray()){
+
+            //to store the frequency of characters
             map.put(ch, map.getOrDefault(ch, 0)+1);
         }
 
+        //string2 traversal
+
+        //take each character fro string 2 one by one 
         for(char ch : s2.toCharArray()) {
+
+            //check if character exists in hashmap , if not then return false 
             if(!map.containsKey(ch)) return false;
             map.put(ch, map.get(ch) - 1);
             if(map.get(ch)==0){

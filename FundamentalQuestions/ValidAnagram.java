@@ -5,10 +5,11 @@ public class ValidAnagram {
         //if length of both string is different , then they cant be anagrams
         if(s1.length()!= s2.length())return false;
 
-        //lowercase
+        //convert both strings to lowercase
         s1 = s1.toLowerCase();
         s2 = s2.toLowerCase();
 
+        //hashmap to store frequency of string characters
         HashMap<Character,Integer> map = new HashMap<>();
 
         for(char ch : s1.toCharArray()){
@@ -24,12 +25,15 @@ public class ValidAnagram {
 
             //check if character exists in hashmap , if not then return false 
             if(!map.containsKey(ch)) return false;
+
+            //else , reduce frequency , as one occurence of this character has been used 
             map.put(ch, map.get(ch) - 1);
+
+            //remove character if frequency of that character becomes 0
             if(map.get(ch)==0){
                 map.remove(ch);
             }
         }
-
         return true;
     }
     public static void main(String[] args){

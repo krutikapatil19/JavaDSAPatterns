@@ -10,6 +10,8 @@ public class FindFirstAndLastPosition {
 
         //traverse the array
         for(int i = 0;i<nums.length; i++){
+
+            //check if current element matches target
             if(nums[i] == target){
                 if(firstOccurence == -1){
                     firstOccurence = i;

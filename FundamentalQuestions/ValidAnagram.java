@@ -1,10 +1,8 @@
 import java.util.HashMap;
-import java.util.Map;
 public class ValidAnagram {
     public static boolean isAnagram(String s1, String s2){
-
-        int i = 0;
-        int j = 0;
+        
+        //if length of both string is different , then they cant be anagrams
         if(s1.length()!= s2.length())return false;
 
         //lowercase

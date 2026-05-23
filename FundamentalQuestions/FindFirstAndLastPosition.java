@@ -25,6 +25,7 @@ public class FindFirstAndLastPosition {
         }
         //store first and last occurrence in array
         int[] result = new int []{firstOccurence, lastOccurence};
+        //return result array
         return result;
     }
     public static void main(String[] args){

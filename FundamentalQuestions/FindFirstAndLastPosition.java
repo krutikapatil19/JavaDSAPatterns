@@ -18,6 +18,8 @@ public class FindFirstAndLastPosition {
                 if(firstOccurence == -1){
                     firstOccurence = i;
                 }
+
+                //keep updating last occurence 
                 lastOccurence = i;
             }
         }

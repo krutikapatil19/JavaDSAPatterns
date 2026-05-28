@@ -10,6 +10,8 @@ public class TwoSum {
 
         //Loop through each element in array
         for(int i = 0;i<nums.length; i++){
+
+            //Find number needed to reach target
             int complement = target - nums[i];
 
             if(map.containsKey(complement)){

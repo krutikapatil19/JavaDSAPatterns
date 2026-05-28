@@ -16,6 +16,8 @@ public class TwoSum {
 
             //Check if complement already exists in map
             if(map.containsKey(complement)){
+
+                //Return indices of complement and current number
                 return new int[]{map.get(complement), i};
             }
             map.put(nums[i],i);

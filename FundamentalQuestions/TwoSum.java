@@ -14,6 +14,7 @@ public class TwoSum {
             //Find number needed to reach target
             int complement = target - nums[i];
 
+            //Check if complement already exists in map
             if(map.containsKey(complement)){
                 return new int[]{map.get(complement), i};
             }

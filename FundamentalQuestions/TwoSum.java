@@ -8,6 +8,7 @@ public class TwoSum {
         //HashMap to store number and its index
         HashMap <Integer,Integer> map = new HashMap<>();
 
+        //Loop through each element in array
         for(int i = 0;i<nums.length; i++){
             int complement = target - nums[i];
 

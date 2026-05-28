@@ -1,8 +1,11 @@
 import java.util.Arrays;
 import java.util.HashMap;
 public class TwoSum {
+
+    //Function to find indices of two numbers whose sum equals target
     public static int[] findNumbers(int[]nums, int target){
 
+        //HashMap to store number and its index
         HashMap <Integer,Integer> map = new HashMap<>();
 
         for(int i = 0;i<nums.length; i++){

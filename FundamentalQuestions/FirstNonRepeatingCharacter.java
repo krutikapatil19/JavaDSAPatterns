@@ -6,6 +6,7 @@ public class FirstNonRepeatingCharacter {
 
         HashMap<Character, Integer> map = new HashMap<>();
 
+        // Count frequency of each character
         for (char ch : s.toCharArray()) {
             map.put(ch, map.getOrDefault(ch, 0) + 1);
         }

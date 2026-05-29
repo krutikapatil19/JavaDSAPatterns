@@ -11,6 +11,7 @@ public class FirstNonRepeatingCharacter {
             map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
 
+        // Find first character with frequency 1
         for (char ch : s.toCharArray()) {
             if (map.get(ch) == 1) {
                 return ch;

@@ -20,6 +20,7 @@ public class TwoSum {
                 //Return indices of complement and current number
                 return new int[]{map.get(complement), i};
             }
+            //Store current number and its index in HashMap
             map.put(nums[i],i);
         }
         return new int[]{};

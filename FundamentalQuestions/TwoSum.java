@@ -23,6 +23,7 @@ public class TwoSum {
             //Store current number and its index in HashMap
             map.put(nums[i],i);
         }
+        //Return empty array if no pair found
         return new int[]{};
         
     }

@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class FirstNonRepeatingCharacter {
 
     public static char findFirstNonRepeating(String s) {

@@ -17,6 +17,7 @@ public class FirstNonRepeatingCharacter {
                 return ch;
             }
         }
+        // If no non-repeating character exists
         return '\0';
     }
 

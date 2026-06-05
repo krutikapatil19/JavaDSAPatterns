@@ -18,7 +18,7 @@ public class FirstNonRepeatingCharacter {
             }
         }
         // If no non-repeating character exists
-        return '\0';
+        return 0;
     }
     public static void main(String[] args) {
         String s = "leetcode";

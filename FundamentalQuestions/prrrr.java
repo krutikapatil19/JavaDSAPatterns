@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Arrays;
 public class prrrr {
     public static int[] twoSum(int[] nums, int target){
 
@@ -20,7 +21,7 @@ public class prrrr {
     }
     public static void main(String[] args){
         int[] nums = {2,3,8,9,13};
-        int target = 20;
-        System.out.println(twoSum(nums, target));
+        int target = 22;
+        System.out.println(Arrays.toString(twoSum(nums, target)));
     }
 }

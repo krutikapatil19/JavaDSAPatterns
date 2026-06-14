@@ -10,7 +10,9 @@ public class KDiffPairsInArray {
 
             if(map.containsKey(complement)){
                 count++;
+                map.put(nums[i],i);
             }else if(map.containsKey(nums[i]+target)){
+                map.put(nums[i],i);
                 count++;
             }
                 else {

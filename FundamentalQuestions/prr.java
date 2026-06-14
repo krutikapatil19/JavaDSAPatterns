@@ -1,21 +1,27 @@
 import java.util.HashMap;
-public class prr{
-    public static boolean twoSum(int[]nums,int target){
+import java.util.Arrays;
+public class prr {
+    public static int[] TwoSumm(int[]nums, int target){
 
-        HashMap<Integer, Integer> map = new HashMap<>();
-        for(int i = 0;i<nums.length; i++){
+        int[] result = new int[2];
+        HashMap <Integer, Integer> map = new HashMap<>();
+        for(int i = 0; i<nums.length; i++){
+            int complement = target - nums[i];
 
-           int complement = target - nums[i];
             if(map.containsKey(complement)){
-                return true;
-            } 
-            else map.put(nums[i],i);
+
+                result[0] = map.get(complement);
+                result[1] = i;
+            } else {
+                map.put(nums[i],i);
+            }
+
         }
-        return false;
+        return result;
     }
-    public static void main(String[] args){
-        int[]nums = {3,10,12,14,20};
-        int target = 26;
-        System.out.println(twoSum(nums,target));
+    public static void main(String args[]){
+        int[]nums = {2,3,5,6,4,1};
+        int target = 10;
+        System.out.println(Arrays.toString(TwoSumm(nums, target)));
     }
 }

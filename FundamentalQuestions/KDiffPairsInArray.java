@@ -10,15 +10,18 @@ public class KDiffPairsInArray {
 
             if(map.containsKey(complement)){
                 count++;
-            }else {
+            }else if(map.containsKey(nums[i]+target)){
+                count++;
+            }
+                else {
                 map.put(nums[i],i);
             }
         }
         return count;
     }
     public static void main(String[] args){
-        int[] nums = {3,4,5,8};
-        int target = 1;
+        int[] nums = {4,6,7};
+        int target = 2;
         System.out.println(findKDiffPairs(nums,target));
     }
 }

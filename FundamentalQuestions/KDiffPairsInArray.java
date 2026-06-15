@@ -17,6 +17,8 @@ public class KDiffPairsInArray {
                 int smaller = Math.min(nums[i],complement);
                 int larger = Math.max(nums[i],complement);
 
+                String pair = smaller + "," +  larger;
+
             }else if(map.containsKey(nums[i]+target)){
                 map.put(nums[i],i);
                 count++;

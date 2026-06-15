@@ -47,6 +47,7 @@ public class KDiffPairsInArray {
             //Store current number for future elements
                 map.put(nums[i],i);
         }
+        
         return count;
     }
     public static void main(String[] args){

@@ -5,7 +5,7 @@ public class KDiffPairsInArray {
     public static int findKDiffPairs(int[]nums , int target){
 
         HashMap<Integer,Integer> map = new HashMap<>();
-        HashSet<Integer> pairs = new HashSet<>();
+        HashSet<String> pairs = new HashSet<>();
         int count = 0;
         for(int i = 0; i<nums.length; i++){
             int complement = nums[i]-target;
@@ -21,7 +21,15 @@ public class KDiffPairsInArray {
 
             }else if(map.containsKey(nums[i]+target)){
                 map.put(nums[i],i);
-                count++;
+
+                int smaller = Math.min(nums[i],complement);
+                int larger = Math.max(nums[i],complement);
+
+                String pair = smaller + "," + larger;
+                if(!pairs.contains(pair)){
+                    pairs.add(pair);
+                    count++;
+                }
             }
                 else {
                 map.put(nums[i],i);

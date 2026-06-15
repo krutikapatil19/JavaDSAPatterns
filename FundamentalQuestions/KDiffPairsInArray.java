@@ -5,7 +5,6 @@ public class KDiffPairsInArray {
         HashMap<Integer,Integer> map = new HashMap<>();
         int count = 0;
         for(int i = 0; i<nums.length; i++){
-            //int j = i+1;
             int complement = nums[i]-target;
 
             if(map.containsKey(complement)){

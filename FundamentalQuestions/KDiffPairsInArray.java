@@ -1,8 +1,10 @@
 import java.util.HashMap;
+
 public class KDiffPairsInArray {
     public static int findKDiffPairs(int[]nums , int target){
 
         HashMap<Integer,Integer> map = new HashMap<>();
+        HashSet<Integer> pairs = new HashSet<>();
         int count = 0;
         for(int i = 0; i<nums.length; i++){
             int complement = nums[i]-target;

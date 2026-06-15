@@ -13,6 +13,10 @@ public class KDiffPairsInArray {
             if(map.containsKey(complement)){
                 count++;
                 map.put(nums[i],i);
+
+                int smaller = Math.min(nums[i],complement);
+                int larger = Math.max(nums[i],complement);
+
             }else if(map.containsKey(nums[i]+target)){
                 map.put(nums[i],i);
                 count++;

@@ -23,7 +23,7 @@ public class KDiffPairsInArray {
             }else if(map.containsKey(nums[i]+target)){
 
                 int smaller = Math.min(nums[i], nums[i] + target);
-                int larger = Math.max(nums[i],complement + target);
+                int larger = Math.max(nums[i], nums[i]+target);
 
                 String pair = smaller + "," + larger;
                 if(!pairs.contains(pair)){
@@ -37,7 +37,7 @@ public class KDiffPairsInArray {
         return count;
     }
     public static void main(String[] args){
-        int[] nums = {4,6,7};
+        int[] nums = {4,6,7,9};
         int target = 2;
         System.out.println(findKDiffPairs(nums,target));
     }

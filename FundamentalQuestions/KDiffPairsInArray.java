@@ -6,7 +6,7 @@ public class KDiffPairsInArray {
 
         //store visited numbers and their indices
         HashMap<Integer,Integer> map = new HashMap<>();
-        
+
         //Store unique pairs(it avoids dupplicate counting)
         HashSet<String> pairs = new HashSet<>();
 
@@ -21,9 +21,11 @@ public class KDiffPairsInArray {
             //Check if smaller number already exists
             if(map.containsKey(complement)){
 
+                // Arrange pair in sorted order
                 int smaller = Math.min(nums[i],complement);
                 int larger = Math.max(nums[i],complement);
 
+                //Create pair string like "4,6"
                 String pair = smaller + "," +  larger;
 
                 // Count only if pair is not counted before
@@ -31,11 +33,15 @@ public class KDiffPairsInArray {
                 pairs.add(pair);
                 count++;
 }
-            }else if(map.containsKey(nums[i]+target)){
+            }
+            // Check if larger number already exists
+            else if(map.containsKey(nums[i]+target)){
 
+                // Arrange pair in sorted order
                 int smaller = Math.min(nums[i], nums[i] + target);
                 int larger = Math.max(nums[i], nums[i]+target);
 
+                // Create pair string like "4,6"
                 String pair = smaller + "," + larger;
 
                 // Count only if pair is not counted before
@@ -46,9 +52,10 @@ public class KDiffPairsInArray {
             }
 
             //Store current number for future elements
-                map.put(nums[i],i);
+            map.put(nums[i],i);
         }
         
+        // Return total unique pairs
         return count;
     }
     public static void main(String[] args){

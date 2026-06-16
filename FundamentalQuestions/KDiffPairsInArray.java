@@ -6,6 +6,7 @@ public class KDiffPairsInArray {
 
         //store visited numbers and their indices
         HashMap<Integer,Integer> map = new HashMap<>();
+        
         //Store unique pairs(it avoids dupplicate counting)
         HashSet<String> pairs = new HashSet<>();
 

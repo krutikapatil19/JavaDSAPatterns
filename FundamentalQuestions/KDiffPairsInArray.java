@@ -32,29 +32,27 @@ public class KDiffPairsInArray {
                 if(!pairs.contains(pair)){
                 pairs.add(pair);
                 count++;
-}
             }
-            // Check if larger number already exists
-            else if(map.containsKey(nums[i]+target)){
+        }
+        // Check if larger number already exists
+        else if(map.containsKey(nums[i]+target)){
 
-                // Arrange pair in sorted order
-                int smaller = Math.min(nums[i], nums[i] + target);
-                int larger = Math.max(nums[i], nums[i]+target);
+            // Arrange pair in sorted order
+            int smaller = Math.min(nums[i], nums[i] + target);
+            int larger = Math.max(nums[i], nums[i]+target);
 
-                // Create pair string like "4,6"
-                String pair = smaller + "," + larger;
+            // Create pair string like "4,6"
+            String pair = smaller + "," + larger;
 
-                // Count only if pair is not counted before
-                if(!pairs.contains(pair)){
-                    pairs.add(pair);
-                    count++;
+            // Count only if pair is not counted before
+            if(!pairs.contains(pair)){
+                pairs.add(pair);
+                count++;
                 }
             }
-
             //Store current number for future elements
             map.put(nums[i],i);
         }
-        
         // Return total unique pairs
         return count;
     }

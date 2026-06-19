@@ -15,6 +15,12 @@ public class validAnagrammm{
                 map.put(s1.charAt(i),1);
             }
         }
+
+        for(int j = 0; j<s2.length();j++){
+            if(!map.containsKey(s2.charAt(j))){
+                return false;
+            }
+        }
         return false;
     }
     public static void main(String[] args){

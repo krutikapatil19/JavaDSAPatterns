@@ -23,6 +23,12 @@ public class validAnagrammm{
             map.put(s2.charAt(j),
             map.get(s2.charAt(j))-1);
         }
+
+        for(int value : map.values()){
+            if(value != 0){
+                return false;
+            }
+        }
         return false;
     }
     public static void main(String[] args){

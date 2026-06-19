@@ -29,7 +29,7 @@ public class validAnagrammm{
                 return false;
             }
         }
-        return false;
+        return true;
     }
     public static void main(String[] args){
         String s1 = "Eat";

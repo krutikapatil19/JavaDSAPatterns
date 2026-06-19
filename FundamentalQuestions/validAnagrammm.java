@@ -39,3 +39,7 @@ public class validAnagrammm{
     }
     
 }
+
+/*I used a HashMap to store character frequencies of the first String.
+Then I traversed the second string and decreased those frequencies.
+*/

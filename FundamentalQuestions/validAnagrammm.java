@@ -16,11 +16,13 @@ public class validAnagrammm{
                 }
 
         for(int j = 0; j<s2.length();j++){
-            if(!map.containsKey(s2.charAt(j))){
+            int freq = map.getOrDefault(s2.charAt(j),0);
+
+            if(freq == 0){
                 return false;
             }
-            map.put(s2.charAt(j),
-            map.get(s2.charAt(j))-1);
+
+            map.put(s2.charAt(j), freq - 1);
         }
 
         for(int value : map.values()){

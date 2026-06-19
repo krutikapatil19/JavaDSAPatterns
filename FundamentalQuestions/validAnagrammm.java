@@ -4,6 +4,9 @@ public class validAnagrammm{
 
         HashMap<Character, Integer> map = new HashMap<>();
 
+        s1 = s1.toLowerCase();
+        s2 = s2.toLowerCase();
+        
         if(s1.length()!= s2.length()){
             return false;
         }

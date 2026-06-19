@@ -20,6 +20,8 @@ public class validAnagrammm{
             if(!map.containsKey(s2.charAt(j))){
                 return false;
             }
+            map.put(s2.charAt(j),
+            map.get(s2.charAt(j))-1);
         }
         return false;
     }

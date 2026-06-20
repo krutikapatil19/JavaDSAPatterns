@@ -9,8 +9,10 @@ public class GroupAnagrams {
             String word = strs[i];
 
             //convert to char arr
+            char[]arr = word.toCharArray();
 
             //sorting the char arr
+            Arrays.sort(arr);
 
             //convert back to string
 

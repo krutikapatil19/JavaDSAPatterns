@@ -15,14 +15,15 @@ public class GroupAnagrams {
             Arrays.sort(arr);
 
             //convert back to string
-            
             String sortedWord =new String(arr);
 
             if(map.containsKey(sortedWord)) {
 
                 //get existing list
+                List<String>list = map.get(sortedWord);
 
                 //add current word to the list
+                list.add(word);
             } else {
                 //create a new arrayList
 

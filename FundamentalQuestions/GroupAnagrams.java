@@ -2,7 +2,18 @@ import java.util.*;
 public class GroupAnagrams {
     public static List<List<String>> groupingAnagrams(String [] strs ){
 
-        s1 = s1.toCharArray();
+        HashMap<String, List<String>> map = new HashMap<>();
+
+        for(int i = 0; i<strs.length; i++){
+
+            String word = strs[i];
+
+            //convert to char arr
+
+            //sorting the char arr
+
+            //convert back to string
+        }
     }
     public static void main(String[] args){
         String[] strs = {"cat","dog","act","god"};

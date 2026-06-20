@@ -15,8 +15,8 @@ public class GroupAnagrams {
             Arrays.sort(arr);
 
             //convert back to string
-
-            String sortedWord = ?;
+            
+            String sortedWord =new String(arr);
 
             if(map.containsKey(sortedWord)) {
 

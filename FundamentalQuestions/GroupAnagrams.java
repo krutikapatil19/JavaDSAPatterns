@@ -27,9 +27,13 @@ public class GroupAnagrams {
             } else {
                 //create a new arrayList
 
+                List<String> list = new ArrayList<>();
+               
                 //add current word 
+                list.add(word);
 
                 //put sortedWord and list into map 
+                map.put(sortedWord,list);
             }
         }
         return new ArrayList<>(map.values());

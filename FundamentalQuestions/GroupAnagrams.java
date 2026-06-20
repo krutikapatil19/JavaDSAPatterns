@@ -13,6 +13,15 @@ public class GroupAnagrams {
             //sorting the char arr
 
             //convert back to string
+
+            String sortedWord = ?;
+
+            if(map.containsKey(sortedWord)) {
+
+                //get existing list
+
+                //add current word to the list
+            }
         }
     }
     public static void main(String[] args){

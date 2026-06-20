@@ -21,8 +21,15 @@ public class GroupAnagrams {
                 //get existing list
 
                 //add current word to the list
+            } else {
+                //create a new arrayList
+
+                //add current word 
+
+                //put sortedWord and list into map 
             }
         }
+        return new ArrayList<>(map.values());
     }
     public static void main(String[] args){
         String[] strs = {"cat","dog","act","god"};

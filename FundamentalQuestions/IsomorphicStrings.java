@@ -7,6 +7,7 @@ public class IsomorphicStrings {
             return false;
         }
 
+        //HashMap is used to store the mappings between characters of s1 and s2.
         HashMap<Character, Character> map = new HashMap<>();
 
         //Traverse both Strings

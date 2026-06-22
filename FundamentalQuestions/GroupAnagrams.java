@@ -53,4 +53,6 @@ Key -> Sorted word ,
 Values -> list of Original Words 
 Eg:
 "aet" -> [eat,tea,ate]
+
+I used a HashMap Grouping Pattern where the sorted version of each word acts as the key and all words having the same sorted form are grouped together in a list.
 */

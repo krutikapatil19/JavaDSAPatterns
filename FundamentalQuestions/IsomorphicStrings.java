@@ -16,9 +16,9 @@ public class IsomorphicStrings {
             char ch1 = s1.charAt(i);
             char ch2 = s2.charAt(i);
 
-            //check if the character from s1 mapped before 
+            //check if this character from s1 was already mapped before 
             if (map.containsKey(ch1)) {
-                // compare if the old mapping matches current mapping , if not then return false 
+                //check whether the previous mapping is same as current mapping ... If not , the strings are not isomorphic.
                 if (map.get(ch1) != ch2) {
                     return false;
                 }

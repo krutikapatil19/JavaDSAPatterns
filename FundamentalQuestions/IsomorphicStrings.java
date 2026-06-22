@@ -34,6 +34,7 @@ public class IsomorphicStrings {
                 map.put(ch1, ch2);
             }
         }
+        //all mappings are valid -> strings are isomorphic 
         return true;
     }
     public static void main(String[] args) {

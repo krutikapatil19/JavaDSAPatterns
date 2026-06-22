@@ -16,15 +16,21 @@ public class IsomorphicStrings {
             char ch1 = s1.charAt(i);
             char ch2 = s2.charAt(i);
 
+            //check if the character from s1 mapped before 
             if (map.containsKey(ch1)) {
-                // compare
+                // compare if the old mapping matches current mapping , if not then return false 
                 if (map.get(ch1) != ch2) {
                     return false;
                 }
-            } else {
+            } 
+            //character has never appeared before
+            else {
+
+                //if ch2 is already being used by another character 
                 if(map.containsValue(ch2)){
                     return false;
                 }
+                //store the new mapping 
                 map.put(ch1, ch2);
             }
         }

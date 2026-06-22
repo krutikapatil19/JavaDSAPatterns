@@ -43,3 +43,10 @@ public class GroupAnagrams {
         System.out.println(groupingAnagrams(strs));
     }
 }
+
+/*This problem is based on HashMap+String Manipulation.
+Key idea : Find a common key -> Store similar items together(Anagrams) -> HashMap<Key, List<Items>>
+Group Anagrams : 
+Sorted Word -> List of Anagrams
+"aet" -> [eat,tea,ate]
+*/

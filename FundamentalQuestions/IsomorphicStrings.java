@@ -1,16 +1,18 @@
 import java.util.HashMap;
-
 public class IsomorphicStrings {
     public static boolean isIsomorphic(String s1, String s2) {
 
+        //if the lengths are different , the strings cannot be isomorphic
         if (s1.length() != s2.length()) {
             return false;
         }
 
         HashMap<Character, Character> map = new HashMap<>();
 
+        //Traverse both Strings
         for (int i = 0; i < s1.length(); i++) {
 
+            //Get current characters 
             char ch1 = s1.charAt(i);
             char ch2 = s2.charAt(i);
 

@@ -48,5 +48,9 @@ public class GroupAnagrams {
 Key idea : Find a common key -> Store similar items together(Anagrams) -> HashMap<Key, List<Items>>
 Group Anagrams : 
 Sorted Word -> List of Anagrams
+Here , 
+Key -> Sorted word ,
+Values -> list of Original Words 
+Eg:
 "aet" -> [eat,tea,ate]
 */

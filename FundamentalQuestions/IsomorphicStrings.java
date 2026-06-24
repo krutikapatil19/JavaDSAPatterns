@@ -6,8 +6,7 @@ public class IsomorphicStrings {
         if (s1.length() != s2.length()) {
             return false;
         }
-
-        //HashMap is used to store the mappings between characters of s1 and s2.
+        //HashMap is used to store the mappings between characters of s1 and s2.... This helps us verify that a character always maps to the same character throughout the string.
         HashMap<Character, Character> map = new HashMap<>();
 
         //Traverse both Strings

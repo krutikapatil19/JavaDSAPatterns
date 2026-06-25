@@ -4,6 +4,16 @@ public class HappyNumber {
 
         //happy number logic 
         HashSet<Integer> set = new HashSet<>();
+        while(!n=1){
+            if(set.contains(n)){
+                return false;
+            }
+            else {
+
+            }
+        }
+
+        return false;
     }
 
         public static int findSquareSum(int n){

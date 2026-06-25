@@ -8,13 +8,12 @@ public class HappyNumber {
             if(set.contains(n)){
                 return false;
             }
-            else {
+            {
                 set.add(n);
                 n = findSquareSum(n);
             }
         }
-
-        return false;
+        return true;
     }
 
         public static int findSquareSum(int n){
@@ -34,7 +33,7 @@ public class HappyNumber {
             return sum;
         }
    public static void main(String[] args){
-    int n = 23;
+    int n = 2;
     System.out.println(isHappyNumber(n));
    } 
 }

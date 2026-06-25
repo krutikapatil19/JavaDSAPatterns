@@ -1,6 +1,9 @@
 public class HappyNumber {
     public static boolean isHappyNumber(int n){
 
+        //happy number logic 
+        HashSet<Integer> set = new HashSet<>();
+    }
 
         public static int findSquareSum(int n){
 
@@ -9,17 +12,15 @@ public class HappyNumber {
 
                 //1
                 int digit = n % 10;
-
                 //2
                 sum = sum + (digit*digit);
-
                 //3
                 n = n/10;
 
             }
+
             return sum;
         }
-    }
    public static void main(String[] args){
     int n = 23;
     System.out.println(isHappyNumber(n));

@@ -4,12 +4,13 @@ public class HappyNumber {
 
         //happy number logic 
         HashSet<Integer> set = new HashSet<>();
-        while(!n=1){
+        while(n != 1){
             if(set.contains(n)){
                 return false;
             }
             else {
-
+                set.add(n);
+                n = findSquareSum(n);
             }
         }
 

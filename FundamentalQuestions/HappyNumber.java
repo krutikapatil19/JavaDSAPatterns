@@ -19,9 +19,12 @@ public class HappyNumber {
             else
             {
                 set.add(n);
+
+                //calculate the next number (sum of squares of digits)
                 n = findSquareSum(n);
             }
         }
+        //number reached 1 , so it is a happy number 
         return true;
     }
 

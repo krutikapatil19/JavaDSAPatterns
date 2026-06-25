@@ -1,3 +1,4 @@
+import java.util.HashSet;
 public class HappyNumber {
     public static boolean isHappyNumber(int n){
 

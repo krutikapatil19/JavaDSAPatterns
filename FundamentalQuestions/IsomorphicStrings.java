@@ -26,7 +26,7 @@ public class IsomorphicStrings {
             //character has never appeared before
             else {
 
-                //if ch2 is already being used by another character 
+                //To check if ch2 is already being used by another character  ..Because two different characters cannot map to the same character
                 if(map.containsValue(ch2)){
                     return false;
                 }

@@ -28,20 +28,25 @@ public class HappyNumber {
         return true;
     }
 
+    //Function to calculate the sum of squares of digits 
         public static int findSquareSum(int n){
 
             int sum = 0;
+
+            //Traverse every digit of the number
             while(n>0){
 
-                //1
+                //Extract the last digit
                 int digit = n % 10;
-                //2
+
+                //Add the square of the digit to the sum
                 sum = sum + (digit*digit);
-                //3
+
+                //Remove the last digit
                 n = n/10;
 
             }
-
+            //return the calculate sum 
             return sum;
         }
    public static void main(String[] args){

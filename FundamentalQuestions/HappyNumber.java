@@ -44,7 +44,6 @@ public class HappyNumber {
 
                 //Remove the last digit
                 n = n/10;
-
             }
             //return the calculate sum 
             return sum;

@@ -12,7 +12,11 @@ public class LongestConsecutiveSequence {
         for(int i = 1; i<nums.length; i++){
             //check if consecutive
             if(nums[i]==nums[i-1]+1){
+                currentLength++;
 
+                if(currentLength>maxLength){
+                    maxLength = currentLength;
+                }
             }
         }
     }

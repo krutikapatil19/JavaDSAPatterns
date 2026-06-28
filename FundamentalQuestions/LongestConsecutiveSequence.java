@@ -3,6 +3,7 @@ public class LongestConsecutiveSequence {
     public static int longestConsecutiveSequencee(int[]nums){
 
         //edge case
+
         //sort the array
         Arrays.sort(nums);
 
@@ -19,7 +20,7 @@ public class LongestConsecutiveSequence {
                     maxLength = currentLength;
                 }
             } else if(nums[i]==nums[i-1]){
-                break;
+                //do nothing (ignore the duplicate)
             }
         }
         return maxLength;

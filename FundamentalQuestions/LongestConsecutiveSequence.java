@@ -9,12 +9,11 @@ public class LongestConsecutiveSequence {
         int currentLength = 0;
         int maxLength = 0;
 
-        for(int i = 0; i<nums.length; i++){
+        for(int i = 1; i<nums.length; i++){
             //check if consecutive
-            if(nums[i]<nums[i+1]){
+            if(nums[i]==nums[i-1]+1){
 
             }
-
         }
     }
     public static void main(String[] args){

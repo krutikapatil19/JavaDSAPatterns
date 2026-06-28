@@ -3,13 +3,16 @@ public class LongestConsecutiveSequence {
     public static int longestConsecutiveSequencee(int[]nums){
 
         //edge case
-
+        if(nums.length == 0){
+            return 0;
+        }
+        
         //sort the array
         Arrays.sort(nums);
 
         //variables 
-        int currentLength = 0;
-        int maxLength = 0;
+        int currentLength = 1;
+        int maxLength = 1;
 
         for(int i = 1; i<nums.length; i++){
             //check if consecutive

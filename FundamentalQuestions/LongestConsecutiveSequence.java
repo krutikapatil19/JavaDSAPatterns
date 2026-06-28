@@ -19,8 +19,12 @@ public class LongestConsecutiveSequence {
                 if(currentLength>maxLength){
                     maxLength = currentLength;
                 }
-            } else if(nums[i]==nums[i-1]){
+            } 
+            //if the adjacent numbers are duplicate:
+            else if(nums[i]==nums[i-1]){
                 //do nothing (ignore the duplicate)
+            }else {
+                currentLength = 1;
             }
         }
         return maxLength;

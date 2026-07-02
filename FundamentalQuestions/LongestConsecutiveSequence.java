@@ -15,11 +15,12 @@ public class LongestConsecutiveSequence {
 
         int current = 1;
 
+        for(int i = 0; i<nums.length; i++){
         //while the next consecutive number exists in HashSet, keep moving forward.
         while(set.contains(current+1)){
             current = current+1;
-
         }
+    }
         return maxLength;
     }
     public static void main(String[] args){

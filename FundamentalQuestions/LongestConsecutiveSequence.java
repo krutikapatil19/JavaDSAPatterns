@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.HashSet;
 public class LongestConsecutiveSequence {
     public static int longestConsecutiveSequencee(int[]nums){
 
@@ -14,21 +15,11 @@ public class LongestConsecutiveSequence {
         int currentLength = 1;
         int maxLength = 1;
 
-        for(int i = 1; i<nums.length; i++){
-            //check if consecutive
-            if(nums[i]==nums[i-1]+1){
-                currentLength++;
+        int current = 1;
 
-                if(currentLength>maxLength){
-                    maxLength = currentLength;
-                }
-            } 
-            //if the adjacent numbers are duplicate:
-            else if(nums[i]==nums[i-1]){
-                //do nothing (ignore the duplicate)
-            }else {
-                currentLength = 1;
-            }
+        while(set.contains(current+1)){
+            current = current+1;
+
         }
         return maxLength;
     }

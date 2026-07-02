@@ -27,13 +27,13 @@ public class LongestConsecutiveSequence {
         }
 
         //Traverse every number in the array
-        for(int i = 0; i<nums.length;i++){
+        for (int num: set){
 
             //check if current number is the start of a sequence
-            if(!set.contains(nums[i]-1)){
+            if(!set.contains(num-1)){
 
                 //start counting from this number
-                current = nums[i];
+                current = num;
                 currentLength = 1;
 
         //while the next consecutive number exists in HashSet, Keep moving forward.

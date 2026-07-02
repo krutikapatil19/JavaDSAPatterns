@@ -15,18 +15,22 @@ public class LongestConsecutiveSequence {
 
         int current = 1;
 
+        //fill HashSet
         for(int i = 0; i<nums.length; i++){
             set.add(nums[i]);
-
+        }
+        for(int i = 0; i<nums.length;i++){
             if(!set.contains(nums[i]-1)){
                 current = nums[i];
                 currentLength = 1;
-            }
+
         //while the next consecutive number exists in HashSet, keep moving forward.
         while(set.contains(current+1)){
             current = current+1;
             currentLength++;
         }
+    }
+}
         if(currentLength > maxLength){
             maxLength = currentLength;
         }

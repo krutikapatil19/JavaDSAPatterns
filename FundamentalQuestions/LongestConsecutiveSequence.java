@@ -8,15 +8,13 @@ public class LongestConsecutiveSequence {
             return 0;
         }
         
-        //sort the array
-        Arrays.sort(nums);
-
         //variables 
         int currentLength = 1;
         int maxLength = 1;
 
         int current = 1;
 
+        //while the next consecutive number exists in HashSet, keep moving forward.
         while(set.contains(current+1)){
             current = current+1;
 

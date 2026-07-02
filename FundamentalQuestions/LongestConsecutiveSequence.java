@@ -8,6 +8,7 @@ public class LongestConsecutiveSequence {
             return 0;
         }
         
+        HashSet<Integer> set = new HashSet<>();
         //variables 
         int currentLength = 1;
         int maxLength = 1;

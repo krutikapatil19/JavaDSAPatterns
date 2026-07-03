@@ -11,6 +11,7 @@ public class TopKFrequentElements {
 
         HashMap<Integer,Integer> map = new HashMap<>();
 
+        //Result array
         int[] result = new int[k];
 
         for(int i = 0; i<nums.length; i++){
@@ -24,16 +25,16 @@ public class TopKFrequentElements {
             }
         }
 
+        //Map.entry<Integer,Integer> -> one key value pair of the HashMap
         List<Map.Entry<Integer, Integer>> list = new ArrayList<>(map.entrySet());
 
         Collections.sort(list, (a,b) -> b.getValue() - a.getValue());
-            //Map.entry<Integer,Integer> -> one key value pair of the HashMap
             
-            /*for(Map.Entry<Integer, Integer> entry : map.entrySet()){
-                int number = entry.getKey();
-                int frequency = entry.getValue();
-            }
-                */
+           //take the first k elements from the sorted list
+           for(int i = 0; i<k; i++){
+            result[i]= list.get(i).getKey();
+           }
+
         return result;
     }
     public static void main(String[] args){

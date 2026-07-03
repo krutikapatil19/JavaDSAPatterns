@@ -17,7 +17,7 @@ public class TopKFrequentElements {
                 map.put(nums[i],1);
             }
         }
-        return;
+        return new int[0];
     }
     public static void main(String[] args){
         int[]nums = {1,1,1,2,2,2,2,3};

@@ -17,11 +17,12 @@ public class TopKFrequentElements {
                 //store this number with frequency 1
                 map.put(nums[i],1);
             }
-            //Map.entry<Integer,Integer> -> one key value pair of the HashSet
-            for(Map.Entry<Integer, Integer> entry : map.entrySet()){
-
-            }
         }
+            //Map.entry<Integer,Integer> -> one key value pair of the HashMap
+            for(Map.Entry<Integer, Integer> entry : map.entrySet()){
+                int number = entry.getKey();
+                int frequency = entry.getValue();
+            }
         return new int[0];
     }
     public static void main(String[] args){

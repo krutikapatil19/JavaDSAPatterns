@@ -5,6 +5,19 @@ public class TopKFrequentElements {
     public static int[] topFrequentElements(int[]nums,int k){
 
         HashMap<Integer,Integer> map = new HashMap<>();
+
+        for(int i = 0; i<nums.length; i++){
+            if(map.containsKey(nums[i])){
+
+                //Take the old frequency , and 1 , and store it back
+                map.put(nums[i],map.get(nums[i]+1));
+            } else {
+
+                //store this number with frequency 1
+                map.put(nums[i],1);
+            }
+        }
+        return;
     }
     public static void main(String[] args){
         int[]nums = {1,1,1,2,2,2,2,3};

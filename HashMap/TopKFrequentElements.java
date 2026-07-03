@@ -1,5 +1,7 @@
 package HashMap;
 import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class TopKFrequentElements {
@@ -13,11 +15,12 @@ public class TopKFrequentElements {
                 //Take the old frequency , and 1 , and store it back
                 map.put(nums[i],map.get(nums[i])+1);
             } else {
-
                 //store this number with frequency 1
                 map.put(nums[i],1);
             }
         }
+
+        List<Map.Entry<Integer, Integer>> list = new ArrayList<>(map.entrySet());
             //Map.entry<Integer,Integer> -> one key value pair of the HashMap
             for(Map.Entry<Integer, Integer> entry : map.entrySet()){
                 int number = entry.getKey();

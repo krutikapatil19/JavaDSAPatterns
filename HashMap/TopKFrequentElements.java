@@ -1,4 +1,5 @@
 package HashMap;
+import java.util.Map;
 import java.util.HashMap;
 
 public class TopKFrequentElements {
@@ -15,6 +16,10 @@ public class TopKFrequentElements {
 
                 //store this number with frequency 1
                 map.put(nums[i],1);
+            }
+            //Map.entry<Integer,Integer> -> one key value pair of the HashSet
+            for(Map.Entry<Integer, Integer> entry : map.entrySet()){
+
             }
         }
         return new int[0];

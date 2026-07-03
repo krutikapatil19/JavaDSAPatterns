@@ -10,7 +10,7 @@ public class TopKFrequentElements {
             if(map.containsKey(nums[i])){
 
                 //Take the old frequency , and 1 , and store it back
-                map.put(nums[i],map.get(nums[i]+1));
+                map.put(nums[i],map.get(nums[i])+1);
             } else {
 
                 //store this number with frequency 1

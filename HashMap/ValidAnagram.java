@@ -18,12 +18,17 @@ public class ValidAnagram {
             map.put(ch,map.getOrDefault(ch,0)+1);
         }
 
+        //string 2 traversal
+        //take each character from string 2 one by one 
         for(char ch : s2.toCharArray()){
 
+            //check if character exists in hashmap, if not then return false
             if(!map.containsKey(ch)) return false;
 
+            //else , reduce frequency, as one occurence of this character has been used
             map.put(ch, map.get(ch)-1);
 
+            //remove character if frequency of that character becomes 0
             if(map.get(ch)==0){
                 map.remove(ch);
             }

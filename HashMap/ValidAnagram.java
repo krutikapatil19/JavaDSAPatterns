@@ -18,8 +18,12 @@ public class ValidAnagram {
             if(!map.containsKey(ch)) return false;
 
             map.put(ch, map.get(ch)-1);
-        }
 
+            if(map.get(ch)==0){
+                map.remove(ch);
+            }
+        }
+        return true;
     }
     public static void main(String[] args){
         String s1 = "listen";

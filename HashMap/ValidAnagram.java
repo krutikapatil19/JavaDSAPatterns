@@ -16,7 +16,8 @@ public class ValidAnagram {
         for(char ch : s2.toCharArray()){
 
             if(!map.containsKey(ch)) return false;
-            map.put(ch, map.getOrDefault(ch,0)+1);
+
+            map.put(ch, map.get(ch)-1);
         }
 
     }

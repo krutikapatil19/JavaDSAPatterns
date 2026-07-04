@@ -3,6 +3,9 @@ public class ValidAnagram {
 
         if(s1.length()!=s2.length())return false;
 
+        s1 = s1.toLowerCase();
+        s2 = s2.toLowerCase();
+
     }
     public static void main(String[] args){
         String s1 = "listen";

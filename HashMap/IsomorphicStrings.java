@@ -16,7 +16,14 @@ public class IsomorphicStrings {
                     return false;
                 }
             }
+            else {
+                if(map.containsValue(ch2)){
+                    return false;
+                }
+                map.put(ch1, ch2);
+            }
         }
+        return true;
     }
     public static void main(String[] args){
         String s1 = "egg";

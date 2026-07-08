@@ -26,12 +26,12 @@ public class GroupAnagrams {
                 list.add(word);
 
                 map.put(sortedWord, list);
-             }
+                }
             }
              return new ArrayList<>(map.values());
         }
         public static void main(String[] args){
-            String[] strs = {"cat","dog","act","god","rat","art"};
+            String[] strs = {"cat","dog","god","rat","art","act"};
             System.out.println(groupingAnagrams(strs));
         }
 }

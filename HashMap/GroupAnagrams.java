@@ -31,7 +31,7 @@ public class GroupAnagrams {
              return new ArrayList<>(map.values());
         }
         public static void main(String[] args){
-            String[] strs = {"cat","dog","act","god"};
+            String[] strs = {"cat","dog","act","god","rat","art"};
             System.out.println(groupingAnagrams(strs));
         }
 }

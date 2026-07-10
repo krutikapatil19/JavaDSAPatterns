@@ -66,7 +66,6 @@ public class LongestConsecutiveSequence {
 4.keep checking next numbers using HashSet.
 5.Update the maximum sequence length.
 
-
 Trick :
 If previous number exists -> skip the current one (as sequence has already started).
 If previous number absent -> starts new sequence.

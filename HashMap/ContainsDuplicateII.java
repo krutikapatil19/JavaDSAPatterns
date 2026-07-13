@@ -2,9 +2,6 @@ import java.util.HashMap;
 public class ContainsDuplicateII {
     public static boolean containsNearbyDuplicate(int[]nums, int k){
 
-        int previousIndex ;
-        int currentIndex;
-
         HashMap<Integer,Integer>map = new HashMap<>();
 
         for(int i = 0; i<nums.length; i++){

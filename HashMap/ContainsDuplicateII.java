@@ -9,7 +9,7 @@ public class ContainsDuplicateII {
 
         for(int i = 0; i<nums.length; i++){
             if(map.containsKey(nums[i])){
-                if(currentIndex - previousIndex == k){
+                if(i-map.get(nums[i]) == k){
                     return true;
                 }
             }

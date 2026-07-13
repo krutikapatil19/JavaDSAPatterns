@@ -1,11 +1,17 @@
-package HashMap;
-
+import java.util.HashMap;
 public class ContainsDuplicateII {
     public static boolean containsNearbyDuplicate(int[]nums, int k){
 
         int previousIndex = 0;
         int currentIndex = 0;
-        
+
+        for(int i = 0; i<nums.length; i++){
+            if(map.containsKey(nums[i])){
+                if(currentIndex - previousIndex == k){
+                    return true;
+                }
+            }
+        }
     }
     public static void main(String[] args){
         int[] nums = {1,2,3,1};

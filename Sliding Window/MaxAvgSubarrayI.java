@@ -6,16 +6,15 @@ public class MaxAvgSubarrayI {
 
         for(int i = 0; i<k; i++){
             currentSum += nums[i];
-    
+        }
         maxSum = currentSum;
 
-        for(i = k; i<nums.length; i++){
+        for(int i = k; i<nums.length; i++){
         //take the prev sum -> remove the element leaving the window - add the element entering the window
         currentSum = currentSum - nums[i-k] + nums[i];
 
         if(currentSum > maxSum){
             maxSum = currentSum;
-        }
         }
     }
     return maxSum;

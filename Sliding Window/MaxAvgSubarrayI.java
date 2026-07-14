@@ -20,7 +20,7 @@ public class MaxAvgSubarrayI {
     return (double) maxSum/k;
 }
     public static void main(String[] args){
-        int[]nums = {1,12,-5,-6,50,3};
+        int[]nums = {1,12,-5,-6,50,0,3};
         int k=4;
         System.out.println(findMaxAverage(nums,k));
     }

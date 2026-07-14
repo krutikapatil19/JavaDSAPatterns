@@ -28,3 +28,9 @@ public class ContainsDuplicateII {
         System.out.println(containsNearbyDuplicate(nums,k));
     }
 }
+
+/*Approach : 
+HashMap : Stores Number -> last occurence Index 
+If the same number appears again , calculate the distance between previous Index when that number appeared and current Index when it appeared again ,using currentIndex - previousIndex.
+If the distance <= k , return true , otherwise update the latest index.
+*/

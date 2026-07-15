@@ -34,3 +34,11 @@ public class MaxAvgSubarrayI {
         System.out.println(findMaxAverage(nums,k));
     }
 }
+
+/*Approach:
+1.Calculate the first window and its sum.
+2.Store it as the maxSum.
+3.Slide the window: Remove left element ,and add the right one.
+4.Update the maximum , if current window sum is greater.
+5.Return the answer.
+*/

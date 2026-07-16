@@ -1,14 +1,18 @@
 public class MaximumSumSubarrayOfSizeK {
     public static int maxSubarraySum(int[]nums, int k){
 
-        int maxSum = 0;
+        //Stores the current window sum
         int currSum = 0;
+
+        //Stores the maximum sum found so far
+        int maxSum = 0;
         
+        //Calculate the first window sum
         for(int i = 0; i<k; i++){
             currSum += nums[i];
         }
         maxSum = currSum;
-        
+
         for(int i = k; i<nums.length; i++){
 
             currSum = currSum - nums[i-k] + nums[i];

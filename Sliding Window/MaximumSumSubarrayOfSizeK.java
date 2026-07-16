@@ -1,6 +1,9 @@
 public class MaximumSumSubarrayOfSizeK {
     public static int maxSubarraySum(int[]nums, intk){
 
+        int maxSum = 0;
+        int currSum = 0;
+        
 
     return ;
     }

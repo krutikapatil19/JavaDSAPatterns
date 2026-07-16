@@ -11,10 +11,13 @@ public class MaximumSumSubarrayOfSizeK {
         for(int i = 0; i<k; i++){
             currSum += nums[i];
         }
+        //First window is the maximum so far
         maxSum = currSum;
 
+        //Slide the window
         for(int i = k; i<nums.length; i++){
 
+            //Remove left element and add right one
             currSum = currSum - nums[i-k] + nums[i];
 
             if(currSum>maxSum){

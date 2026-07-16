@@ -20,10 +20,12 @@ public class MaximumSumSubarrayOfSizeK {
             //Remove left element and add right one
             currSum = currSum - nums[i-k] + nums[i];
 
+            //Update maxSum ..if currSum is greater than maxSum..
             if(currSum>maxSum){
                 maxSum = currSum;
             }
         }
+        //Return the maximum sum
     return maxSum;
     }
     public static void main(String[] args){

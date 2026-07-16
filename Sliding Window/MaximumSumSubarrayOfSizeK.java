@@ -9,7 +9,8 @@ public class MaximumSumSubarrayOfSizeK {
             maxSum = currSum;
         }
         for(int i = k; i<nums.length; i++){
-            currSum += nums[i];
+
+            currSum = currSum - nums[i-k] + nums[i];
 
             if(currSum>maxSum){
                 maxSum = currSum;

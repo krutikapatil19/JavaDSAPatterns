@@ -7,7 +7,7 @@ public class LongestSubstringWoRepeatingChar {
         }
     }
     public static void main(String[] args){
-        String s = "bbbbac";
+        String s = "abbbbac";
         System.out.println(longestSubstring(s));
     }
 }

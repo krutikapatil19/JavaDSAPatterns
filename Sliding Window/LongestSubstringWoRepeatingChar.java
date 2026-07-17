@@ -1,9 +1,9 @@
 public class LongestSubstringWoRepeatingChar {
-    public static int longestSubstring(int[]nums){
+    public static int longestSubstring(String s){
 
     }
     public static void main(String[] args){
-        int[] nums = {};
-        System.out.println(longestSubstring(nums));
+        String s = "bbbbac";
+        System.out.println(longestSubstring(s));
     }
 }

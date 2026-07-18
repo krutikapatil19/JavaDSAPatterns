@@ -7,11 +7,14 @@ public class LongestSubstringWoRepeatingChar {
         int right = 0;
         int maxLength = 0;
 
-        for(left = 0; left<s.length();left++){
+        for(right = 0; right<s.length();right++){
             char ch = s.charAt(right);
             while(set.contains(ch)){
-                right++;
+                set.remove(s.charAt(right));
+                left++;
             }
+            set.add(s.charAt(right));
+            maxLength = Math.max(maxLength,right-left);
         }
         return maxLength;
     }

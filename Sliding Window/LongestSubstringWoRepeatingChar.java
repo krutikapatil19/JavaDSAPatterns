@@ -10,11 +10,11 @@ public class LongestSubstringWoRepeatingChar {
         for(right = 0; right<s.length();right++){
             char ch = s.charAt(right);
             while(set.contains(ch)){
-                set.remove(s.charAt(right));
+                set.remove(s.charAt(left));
                 left++;
             }
             set.add(s.charAt(right));
-            maxLength = Math.max(maxLength,right-left);
+            maxLength = Math.max(maxLength,right-left+1);
         }
         return maxLength;
     }

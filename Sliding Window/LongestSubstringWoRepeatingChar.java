@@ -1,21 +1,22 @@
 import java.util.HashSet;
 public class LongestSubstringWoRepeatingChar {
-    public static int longestSubstring(String s){
+    public static int lengthOfLongestSubstring(String s){
 
-        HashSet<Character> set = new HashSet()<>;
+        HashSet<Character> set = new HashSet<>;
         int left = 0;
         int right = 0;
+        int maxLength = 0;
 
-        for(int i = 0; i<s.length();i++){
-            if(set.contains(ch)){
+        for(left = 0; left<s.length();left++){
+            char ch = s.charAt(right);
+            while(set.contains(ch)){
                 right++;
-            }else {
-                set.add(ch);
             }
         }
+        return maxLength;
     }
     public static void main(String[] args){
         String s = "abbbbac";
-        System.out.println(longestSubstring(s));
+        System.out.println(lengthOfLongestSubstring(s));
     }
 }

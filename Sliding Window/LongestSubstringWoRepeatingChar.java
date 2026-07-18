@@ -15,13 +15,14 @@ public class LongestSubstringWoRepeatingChar {
             //stores the current character
             char ch = s.charAt(right);
 
-            //as long as the window is valid, keep shrinking it from the left
+            //Shrink the window until there are no duplicates
             while(set.contains(ch)){
                 set.remove(s.charAt(left));
                 left++;
             }
             //add the current character after the window becomes valid. (which is at the right)
             set.add(ch);
+            //update the maximum length
             maxLength = Math.max(maxLength,right-left+1);
         }
         return maxLength;

@@ -2,7 +2,7 @@ import java.util.HashSet;
 public class LongestSubstringWoRepeatingChar {
     public static int lengthOfLongestSubstring(String s){
 
-        HashSet<Character> set = new HashSet<>;
+        HashSet<Character> set = new HashSet<>();
         int left = 0;
         int right = 0;
         int maxLength = 0;

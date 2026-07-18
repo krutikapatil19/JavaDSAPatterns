@@ -15,7 +15,7 @@ public class LongestSubstringWoRepeatingChar {
             //stores the current character
             char ch = s.charAt(right);
 
-            //Shrink the window until there are no duplicates
+            //Shrink the window until there are no duplicates 
             while(set.contains(ch)){
                 set.remove(s.charAt(left));
                 left++;

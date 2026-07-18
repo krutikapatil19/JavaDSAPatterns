@@ -32,3 +32,5 @@ public class LongestSubstringWoRepeatingChar {
         System.out.println(lengthOfLongestSubstring(s));
     }
 }
+
+//Pattern used : HashSet + Variable Sliding window

@@ -7,15 +7,18 @@ public class LongestRepeatingReplacement {
         int left = 0;
         int windowLength = 0;
         int maxFreq=0;
+        int right;
 
-        for(int right = 0; right<s.length(); right++){
+        for(right = 0; right<s.length(); right++){
             char ch = s.charAt(right);
+            map.put(ch,map.getOrDefault(ch,0)+1);
         }
                 while((windowLength - maxFreq)>k){
             //shrink window
         }
         //shrink window
         //Replacement needed = Window length - Most Frequent character count 
+    return right - left +1;
     }
     public static void main(String[] args){
         String s = "ABAB";

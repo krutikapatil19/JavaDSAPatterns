@@ -2,6 +2,14 @@ import java.util.HashMap;
 public class LongestRepeatingReplacement {
     public static int longestRepeatingCharReplacement(String s, int k){
 
+        HashMap<Character,Integer> map = new HashMap<>();
+
+        int windowLength = 0;
+        int maxFreq=0;
+                while((windowLength - maxFreq)>k){
+            //shrink window
+        }
+        //shrink window
         //Replacement needed = Window length - Most Frequent character count 
     }
     public static void main(String[] args){

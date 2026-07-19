@@ -4,8 +4,13 @@ public class LongestRepeatingReplacement {
 
         HashMap<Character,Integer> map = new HashMap<>();
 
+        int left = 0;
         int windowLength = 0;
         int maxFreq=0;
+
+        for(int right = 0; right<s.length(); right++){
+            char ch = s.charAt(right);
+        }
                 while((windowLength - maxFreq)>k){
             //shrink window
         }

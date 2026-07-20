@@ -13,12 +13,14 @@ public class LongestRepeatingReplacement {
             windowLength = right-left+1;
             char ch = s.charAt(right);
             map.put(ch,map.getOrDefault(ch,0)+1);
+
+            maxFreq= Math.max(maxFreq, map.get(ch));
         }
                 while((windowLength - maxFreq)>k){
             left++;
         }
         
-    return maxFreq= Math.max(maxFreq, map.get(ch));
+    return maxFreq;
     }
     public static void main(String[] args){
         String s = "ABAB";

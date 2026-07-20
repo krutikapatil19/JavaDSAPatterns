@@ -10,6 +10,7 @@ public class LongestRepeatingReplacement {
         int right;
 
         for(right = 0; right<s.length(); right++){
+            windowLength = right-left+1;
             char ch = s.charAt(right);
             map.put(ch,map.getOrDefault(ch,0)+1);
         }

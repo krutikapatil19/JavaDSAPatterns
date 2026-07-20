@@ -18,7 +18,7 @@ public class LongestRepeatingReplacement {
         }
         //shrink window
         //Replacement needed = Window length - Most Frequent character count 
-    return right - left +1;
+    return maxFreq= Math.max(maxFreq, map.get(ch));
     }
     public static void main(String[] args){
         String s = "ABAB";

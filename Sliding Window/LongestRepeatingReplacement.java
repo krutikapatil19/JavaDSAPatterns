@@ -14,10 +14,9 @@ public class LongestRepeatingReplacement {
             map.put(ch,map.getOrDefault(ch,0)+1);
         }
                 while((windowLength - maxFreq)>k){
-            //shrink window
+            left++;
         }
-        //shrink window
-        //Replacement needed = Window length - Most Frequent character count 
+        
     return maxFreq= Math.max(maxFreq, map.get(ch));
     }
     public static void main(String[] args){

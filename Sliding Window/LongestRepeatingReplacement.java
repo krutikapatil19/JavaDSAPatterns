@@ -17,6 +17,8 @@ public class LongestRepeatingReplacement {
             maxFreq= Math.max(maxFreq, map.get(ch));
         
                 while((windowLength - maxFreq)>k){
+                    char leftChar = s.charAt(left);
+                    map.put(leftChar, map.get(leftChar) - 1);
             left++;
         }
     }

@@ -15,11 +15,11 @@ public class LongestRepeatingReplacement {
             map.put(ch,map.getOrDefault(ch,0)+1);
 
             maxFreq= Math.max(maxFreq, map.get(ch));
-        }
+        
                 while((windowLength - maxFreq)>k){
             left++;
         }
-        
+    }
     return maxFreq;
     }
     public static void main(String[] args){

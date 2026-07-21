@@ -29,13 +29,14 @@ public class Longest {
                 windowLength =  right-left+1;
                 //by doing right-left+1
             }
+            maxLength = Math.max(maxLength, windowLength);
           
         }
         return maxLength;
     }
     public static void main(String[] args){
         String s = "ABAB";
-        int k = 2;
+        int k = 1;
         System.out.println(LongestCharReplacement(s,k));
     }
 }

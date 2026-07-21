@@ -9,7 +9,12 @@ public class Longest {
 
         for(int right = 0; right<s.length(); right++){
             char ch = s.charAt(right);
-            map.put(map.getOrDefault(ch,0)+1);
+            
+            int count = map.getOrDefault(ch,0)+1;
+            map.put(ch, count);
+
+            maxFreq = Math.max(maxFreq, count);
+          
         }
         return maxLength;
     }

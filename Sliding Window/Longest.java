@@ -8,7 +8,8 @@ public class Longest {
         int maxLength = 0;
 
         for(int right = 0; right<s.length(); right++){
-
+            char ch = s.charAt(right);
+            map.put(map.getOrDefault(ch,0)+1);
         }
         return maxLength;
     }

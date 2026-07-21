@@ -1,49 +1,46 @@
 import java.util.HashMap;
 public class LongestRepeatingCharacterReplacement {
-    public static int characterReplacement(String s, int k){
+    public static int LongestCharReplacement(String s, int k){
 
-        int left = 0;       //left character of window 
-        int maxLen = 0;     //store final answer 
-        int maxFreq = 0;    //store highest frequency char in current window
+        HashMap<Character,Integer>map = new HashMap<>();
+        int left=0;
+        int maxFreq = 0;    //highest freq of any character in current window
+        int maxLength = 0;  //store the result
 
-        //to store frequency of characters 
-        HashMap<Character,Integer> map = new HashMap<>();
-  
-        //expand window using right pointer
-        for(int right = 0;right<s.length();right++){
+        //Expand the window using right pointer
+        for(int right = 0; right<s.length(); right++){
             char ch = s.charAt(right);
+            
+            //Increase freq of current character
+            map.put(ch, map.getOrDefault(ch,0) + 1);
 
-            //add current character to map
-            map.put(ch,map.getOrDefault(ch,0) + 1);
+            //update max Frequency , if this count is the new highest (updating highest freq seen in this window)
+            maxFreq = Math.max(maxFreq,map.get(ch));
 
-            //current window size 
-            int windowSize = right-left + 1;
+            //current window size
+            int windowLength = right - left + 1;
 
-            //update max frequency character to map
-            maxFreq = Math.max(maxFreq, map.get(ch));
-
-            //Check if window is invalid  (i.e too many replacements needed)
-            if(windowSize - maxFreq > k){
-                //shrink window from left 
+            //If more than k replacements are needed, that means the window is invalid -> shrink the window from left 
+            while(windowLength - maxFreq > k){
                 char leftChar = s.charAt(left);
 
+                //decrease leftchar's count in the map (as the leftmost char is removed )
                 map.put(leftChar, map.get(leftChar)-1);
-
-                //if frequency becomes 0 -> remove from map
-                if(map.get(leftChar)==0){
-                    map.remove(leftChar);
-                }
                 left++;
-            }
 
-            //update max length of valid window 
-            maxLen = Math.max(maxLen, right-left+1);
+                //recalculate windowLength after shrinking
+                windowLength =  right-left+1;
+            }
+            
+            //store the maximum valid window length
+            maxLength = Math.max(maxLength, windowLength);
+          
         }
-        return maxLen;
-        }
-        public static void main(String[] args){
-            String s = "ABAB";
-            int k = 2;
-            System.out.println(characterReplacement(s,k));
-        }
+        return maxLength;
     }
+    public static void main(String[] args){
+        String s = "ABAB";
+        int k = 1;
+        System.out.println(LongestCharReplacement(s,k));
+    }
+}

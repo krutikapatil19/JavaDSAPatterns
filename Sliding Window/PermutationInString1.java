@@ -8,7 +8,7 @@ public class PermutationInString1 {
             return false;
         }
 
-        //frequency array
+        //create frequency array
         int[] frequency = new int[26];
         }
     public static void main(String[] args){

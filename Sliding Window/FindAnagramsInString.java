@@ -5,11 +5,13 @@ import java.util.Arrays;
 public class FindAnagramsInString {
     public static List<Integer>  isAnagram(String s, String p){
 
+        // Store all starting indices of anagrams
         List<Integer> result = new ArrayList<>();
     
+        //size ofthe sliding window
         int windowSize = p.length();
 
-        //base case
+        //base case : if pattern is longer than string, no anagram is possible
         if(p.length()>s.length()){
             return result;
         }
@@ -18,11 +20,11 @@ public class FindAnagramsInString {
         int[] pFreq = new int[26];              //frequency of chars in p
         int[] windowFreq = new int[26];         //freq of chars in current window of s
     
-        for(int i = 0;i<windowSize;i++){
+        for(int i = 0; i<windowSize; i++){
 
+            //Frequency arrays :  
             //count chars of p
             pFreq[p.charAt(i)-'a']++;
-
             //count chars of first window of s
             windowFreq[s.charAt(i)-'a']++;
 

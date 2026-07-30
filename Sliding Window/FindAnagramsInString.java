@@ -26,17 +26,19 @@ public class FindAnagramsInString {
             //count chars of first window of s
             windowFreq[s.charAt(i)-'a']++;
 
+        }
             if(Arrays.equals(pFreq,windowFreq)){
                 result.add(0);
             }
-        }
 
         //Build frequencies
         for(int i = windowSize; i<s.length();i++){
 
             //remove leftmost character
+            windowFreq[s.charAt(i-windowSize)-'a']--;
 
             //add rightmost character
+            windowFreq[s.charAt(i)-'a']++;
 
             //Compare frequencies
             if(Arrays.equals(pFreq, windowFreq)){

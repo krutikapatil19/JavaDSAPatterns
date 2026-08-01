@@ -29,11 +29,12 @@ public class FindAnagramsInString {
             windowFreq[s.charAt(i)-'a']++;
 
         }
-            if(Arrays.equals(pFreq,windowFreq)){
-                result.add(0);
+        //check the first window
+        if(Arrays.equals(pFreq,windowFreq)){
+            result.add(0);
             }
 
-        //Build frequencies
+        //Slide the window
         for(int i = windowSize; i<s.length();i++){
 
             //remove leftmost character
@@ -45,11 +46,10 @@ public class FindAnagramsInString {
             //Compare frequencies
             if(Arrays.equals(pFreq, windowFreq)){
 
-                //If equal, add starting index
+                //If equal, store starting index
                 result.add (i-windowSize + 1);
             }
         }
-
     return result;
     }
     public static void main(String[] args){

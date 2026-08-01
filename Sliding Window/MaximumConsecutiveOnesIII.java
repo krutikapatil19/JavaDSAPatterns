@@ -1,9 +1,9 @@
 public class MaximumConsecutiveOnesIII {
     public static int maximumOnes(int[] arr, int k){
 
-        int left = 0;           
-        int zeroesCount = 0;    
-        int maxLen = 0;         
+        int left = 0;           //start of window
+        int zeroesCount = 0;    //number of 0s in current window 
+        int maxLen = 0;         //answer (max length found)
 
         //move right pointer
         for(int right = 0;right<arr.length;right++){
@@ -13,6 +13,7 @@ public class MaximumConsecutiveOnesIII {
                 zeroesCount++;
             }
 
+            //if window becomes invalid (more than k zeroes)
             while(zeroesCount >k) {
 
                 //if left element is 0 -> reduce zero count
@@ -20,9 +21,10 @@ public class MaximumConsecutiveOnesIII {
                     zeroesCount--;
                 }
 
+                //shrink window 
                 left++;
             }
-            
+            //update max length
             maxLen = Math.max(maxLen, right - left + 1);
         }
         return maxLen;

@@ -12,7 +12,6 @@ public class AllAnagramsInAString {
 
         //need -> freq of p
         int[] need = new int[26];
-
         //window -> freq of current window in s
         int[] window = new int[26];
 
@@ -47,7 +46,7 @@ public class AllAnagramsInAString {
         }
         return result;
     }
-    
+
     //compare both frequency arrays
     public static boolean matches(int[] a, int[] b) {
                 for(int i = 0; i<26; i++){

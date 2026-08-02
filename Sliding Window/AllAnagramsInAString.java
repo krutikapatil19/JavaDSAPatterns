@@ -27,12 +27,10 @@ public class AllAnagramsInAString {
         for(int i = 0;i<k;i++){
             window[s.charAt(i) - 'a']++;
         }
-
         //check first window 
         if(matches(need, window)){
             result.add(0);
         }
-
         //slide window 
         for(int i = k; i< s.length(); i++){
 

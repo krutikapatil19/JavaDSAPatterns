@@ -13,14 +13,12 @@ public class InsertSearchPosition {
                 right = mid-1;
             }else{
                 left=mid+1;
-            }
-            
+            } 
         }
-        
     }
     public static void main(String[]args){
-        int[]nums = {1,3,5,6};
-        int target = 5;
+        int[]nums = {1,3,4,5,6};
+        int target = 2;
         System.out.println(nums,target);
     }
 }

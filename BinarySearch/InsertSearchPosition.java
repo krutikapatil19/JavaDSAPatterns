@@ -19,7 +19,8 @@ public class InsertSearchPosition {
                 left=mid+1;
             } 
         }
-        //loop ends when left>right
+        //loop ends when left > right(target not found in array)
+        //at this point, "left" has naturally moved to its correct insert position.
         return left;
     }
     public static void main(String[]args){

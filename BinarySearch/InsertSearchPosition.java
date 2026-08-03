@@ -10,12 +10,13 @@ public class InsertSearchPosition {
             int mid = (left+right)/2;
 
             if(nums[mid]==target){
-
                 //if target is found, return its index immediately
                 return mid;
             } else if(nums[mid]>target){
+                //if target is smaller ,search left half
                 right = mid-1;
             }else{
+                //if target is larger, search right half 
                 left=mid+1;
             } 
         }

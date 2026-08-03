@@ -1,13 +1,17 @@
 public class InsertSearchPosition {
     public static int searchInsert(int[]nums,int target){
 
-        int left = 0;
-        int right = nums.length-1;
+        int left = 0;                   //starting index
+        int right = nums.length-1;      //ending index
 
-        while(left<=right){
+        while(left<=right){             //keep searching while range is valid 
+
+            //calculate middle element of current range 
             int mid = (left+right)/2;
 
             if(nums[mid]==target){
+
+                //if target is found, return its index immediately
                 return mid;
             } else if(nums[mid]>target){
                 right = mid-1;
@@ -15,6 +19,7 @@ public class InsertSearchPosition {
                 left=mid+1;
             } 
         }
+        //loop ends when left>right
         return left;
     }
     public static void main(String[]args){

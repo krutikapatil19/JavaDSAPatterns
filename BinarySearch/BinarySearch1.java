@@ -19,8 +19,8 @@ public class BinarySearch1{
         return -1;
     }
     public static void main(String[] args){
-        int[]nums = {2,3,8,12};
-        int k = 3;
+        int[]nums = {2,3,8,12,15,21,50};
+        int k = 12;
         System.out.println(searchElement(nums,k));
     }
 }

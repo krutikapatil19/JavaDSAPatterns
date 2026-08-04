@@ -14,10 +14,14 @@ public class searchRange {
 
         int left = 0;
         int right = nums.length-1;
+        int result = -1;        //for the case , where target is never found 
 
         while(left<=right){
             //main logic
             int mid = (left+right)/2;
+            if(nums[mid]==target){
+
+            }
 
         }
         return -1;

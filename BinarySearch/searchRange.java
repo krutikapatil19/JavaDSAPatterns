@@ -19,11 +19,16 @@ public class searchRange {
         while(left<=right){
             //main logic
             int mid = (left+right)/2;
-            if(nums[mid]==target){
 
+            if(nums[mid]>target){
+                right = mid-1;
+            }else if (nums[mid]<target){
+                left=mid+1;
             }
 
-        }
+            } else {
+                result = mid;   //save this match
+            }
         return -1;
     }
         

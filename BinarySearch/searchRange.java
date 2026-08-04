@@ -4,6 +4,9 @@ public class searchRange {
     public static int[] findSearchRange(int[]nums, int k){
         int[] result = new int[2];
 
+        result[0] = findBound(nums, k, true);       //isSearchingLeft(true) -> looking for leftmost
+        result[1] = findBound(nums, k, false);      //false -> looking for rightmost occurence
+
         return result;
     }
 
@@ -14,6 +17,8 @@ public class searchRange {
 
         while(left<=right){
             //main logic
+            int mid = (left+right)/2;
+
         }
         return -1;
     }

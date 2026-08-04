@@ -1,5 +1,5 @@
+import java.util.Arrays;
 public class searchRange {
-
 
     public static int[] findSearchRange(int[]nums, int k){
         int[] result = new int[2];
@@ -26,21 +26,20 @@ public class searchRange {
             else if (nums[mid]<target){
                 left=mid+1;
             } else {
-                result = mid;   //save this match
+                result = mid;   //save this match, don't return
 
                 if(isSearchingLeft) {
-                    right = mid-1;
+                    right = mid-1;      //keep searching left for an earlier match
                 } else {
-                    left = mid+1;
+                    left = mid+1;       //keep searching right for an even later match
                 }
             }
         }
-        return -1;
-    }
-        
+        return result;      //returns the saved match 
+    }   
     public static void main(String[]args){
         int[]nums = {5,7,7,8,8,8,10};
         int k = 8;
-        System.out.println(findSearchRange(nums,k));
+        System.out.println(Arrays.toString(findSearchRange(nums,k)));
     }
 }

@@ -30,3 +30,5 @@ public class InsertSearchPosition {
         System.out.println(searchInsert(nums,target));
     }
 }
+
+//Remember: If target element not found, and when the left and right intersects or cross each other, left always lands exactly where the target should be inserted.

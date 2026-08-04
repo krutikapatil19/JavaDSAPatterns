@@ -27,6 +27,12 @@ public class searchRange {
                 left=mid+1;
             } else {
                 result = mid;   //save this match
+
+                if(isSearchingLeft) {
+                    right = mid-1;
+                } else {
+                    left = mid+1;
+                }
             }
         }
         return -1;

@@ -10,6 +10,7 @@ public class searchRange {
         return result;
     }
 
+    //Helper method ,that method 1 relies on 
     public static int findBound(int[]nums, int target, boolean isSearchingLeft){
 
         int left = 0;

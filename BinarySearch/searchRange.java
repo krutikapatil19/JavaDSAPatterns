@@ -25,7 +25,7 @@ public class searchRange {
                 right = mid-1;      // target is smaller, search left half
             }
             else if (nums[mid]<target){
-                left=mid+1;
+                left=mid+1;         // target is bigger, search right half
             } else {
                 result = mid;   //save this match, don't return
 

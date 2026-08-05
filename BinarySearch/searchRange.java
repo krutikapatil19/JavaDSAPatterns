@@ -18,16 +18,17 @@ public class searchRange {
         int result = -1;        //for the case , where target is never found 
 
         while(left<=right){
+
             //main logic
             int mid = (left+right)/2;
 
             if(nums[mid]>target){
-                right = mid-1;      // target is smaller, search left half
+                right = mid-1;          // target is smaller, search left half
             }
             else if (nums[mid]<target){
-                left=mid+1;         // target is bigger, search right half
+                left=mid+1;             // target is bigger, search right half
             } else {
-                result = mid;   //save this match, don't return
+                result = mid;           //save this match, don't return
 
                 if(isSearchingLeft) {
                     right = mid-1;      //keep searching left for an earlier match
@@ -36,7 +37,7 @@ public class searchRange {
                 }
             }
         }
-        return result;      //returns the saved match 
+        return result;                  //returns the saved match 
     }   
     public static void main(String[]args){
         int[]nums = {5,7,7,8,8,8,10};

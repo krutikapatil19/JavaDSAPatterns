@@ -22,7 +22,7 @@ public class searchRange {
             int mid = (left+right)/2;
 
             if(nums[mid]>target){
-                right = mid-1;
+                right = mid-1;      // target is smaller, search left half
             }
             else if (nums[mid]<target){
                 left=mid+1;

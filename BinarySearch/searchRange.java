@@ -10,7 +10,8 @@ public class searchRange {
         return result;
     }
 
-    //Helper method ,that method 1 relies on 
+    //Helper method ,that method 1 relies on .
+    //This method is used to find either the leftmost or the rightmost occurence of a target , depending on the flag
     public static int findBound(int[]nums, int target, boolean isSearchingLeft){
 
         int left = 0;

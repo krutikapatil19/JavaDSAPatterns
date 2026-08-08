@@ -46,3 +46,10 @@ public class searchRange {
         System.out.println(Arrays.toString(findSearchRange(nums,k)));
     }
 }
+
+/*If Interviewer asks how would you avoid Integer Overflow in binary search?
+Using formula for mid as : int mid = left + (right-left)/2;  
+instead of int mid = (left+right)/2;
+
+Useful in cases where the integers value is too large ..like Integer.MAX_VALUE;
+*/

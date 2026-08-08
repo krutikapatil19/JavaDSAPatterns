@@ -1,14 +1,15 @@
 public class FindFloorAndCeil {
-    public static int[] floorAndCeilOfANumber(int[]nums, int k){
+    public static int floorAndCeilOfANumber(int[]nums, int k){
 
         int left = 0;
         int right = nums.length-1;
 
-        int result;
-        
+        int result=0;
+    
+            while(left<=right){
+                
             int mid = (left+right)/2;
 
-            while(left<=right){
             if(nums[mid]<=k){
                result = nums[mid];
                 left=mid+1;
@@ -16,6 +17,7 @@ public class FindFloorAndCeil {
                 right = mid-1;
             }
         }
+        return result;
     }
     public static void main(String[] args){
         int[] nums = {1, 2, 8, 10, 10, 12, 19};

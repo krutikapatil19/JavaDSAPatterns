@@ -29,7 +29,7 @@ public class searchRange {
             else if (nums[mid]<target){
                 left=mid+1;             // target is bigger, search right half
             } else {
-                result = mid;           //save this match, don't return
+                result = mid;           //save this match, don't return (just in case we found better, overwrite it. result basically holds the best answer found so far.)
 
                 if(isSearchingLeft) {
                     right = mid-1;      //keep searching left for an earlier match

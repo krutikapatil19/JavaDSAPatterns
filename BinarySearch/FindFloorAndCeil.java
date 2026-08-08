@@ -3,11 +3,9 @@ public class FindFloorAndCeil {
 
         int left = 0;
         int right = nums.length-1;
-
-        int result=0;
+        int result=-1;
     
             while(left<=right){
-                
             int mid = (left+right)/2;
 
             if(nums[mid]<=k){
@@ -19,9 +17,30 @@ public class FindFloorAndCeil {
         }
         return result;
     }
+
+    //Method to find ceiling
+    public static int findCeiling(int[]nums, int k){
+
+        int left = 0;
+        int right = nums.length-1;
+        int result = -1;
+
+        while(left<=right){
+
+        int mid = (left+right)/2;
+
+            if(nums[mid]>=k){
+                return mid;
+            } else {
+                left= mid+1;
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args){
         int[] nums = {1, 2, 8, 10, 10, 12, 19};
-        int x = 5;
+        int k = 5;
         System.out.println(floorAndCeilOfANumber(nums,k));
     }
 }

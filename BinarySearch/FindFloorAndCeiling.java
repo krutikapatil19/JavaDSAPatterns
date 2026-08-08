@@ -1,5 +1,5 @@
-public class FindFloorAndCeil {
-    public static int floorAndCeilOfANumber(int[]nums, int k){
+public class FindFloorAndCeiling {
+    public static int floorAndCeilingOfANumber(int[]nums, int k){
 
         int left = 0;
         int right = nums.length-1;
@@ -42,6 +42,8 @@ public class FindFloorAndCeil {
     public static void main(String[] args){
         int[] nums = {1, 2, 8, 10, 10, 12, 19};
         int k = 5;
-        System.out.println(floorAndCeilOfANumber(nums,k));
+        int floor = floorAndCeilingOfANumber(nums,k);
+        int ceiling = findCeiling(nums, k);
+        System.out.println("Floor: " + floor + " Ceiling: "+ ceiling);
     }
 }

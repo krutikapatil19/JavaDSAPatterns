@@ -1,6 +1,17 @@
 public class FindFloorAndCeil {
     public static int[] floorAndCeilOfANumber(int[]nums, int k){
 
+        int left = 0;
+        int right = nums.length-1;
+        
+            int mid = (left+right)/2;
+
+            if(nums[mid]<=k){
+               int result = nums[mid];
+                left=mid+1;
+            } else {
+                right = mid-1;
+            }
     }
     public static void main(String[] args){
         int[] nums = {1, 2, 8, 10, 10, 12, 19};

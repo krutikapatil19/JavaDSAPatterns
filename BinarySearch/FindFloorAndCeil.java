@@ -3,12 +3,14 @@ public class FindFloorAndCeil {
 
         int left = 0;
         int right = nums.length-1;
+
+        int result;
         
             int mid = (left+right)/2;
 
             while(left<=right){
             if(nums[mid]<=k){
-               int result = nums[mid];
+               result = nums[mid];
                 left=mid+1;
             } else {
                 right = mid-1;

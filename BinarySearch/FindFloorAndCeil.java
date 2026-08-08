@@ -30,7 +30,8 @@ public class FindFloorAndCeil {
         int mid = (left+right)/2;
 
             if(nums[mid]>=k){
-                return mid;
+                result = nums[mid];
+                right = mid-1;
             } else {
                 left= mid+1;
             }

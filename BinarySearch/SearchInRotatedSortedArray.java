@@ -8,15 +8,22 @@ public class SearchInRotatedSortedArray {
         while(left<=right){
             int mid = (left+right)/2;
 
+            //found the target directly, return its index right away.
+            //its safe to return immediately since all elements are distinct.
             if(nums[mid]==target){
                 return mid;
             } 
 
+            //check if the left half (start...to...mid) is sorted
             else if (nums[left]<=nums[mid]){
+
+                //target's value falls inside the sorted left half's range
                 if (nums[left] <= target && target <= nums[mid]){
-                //it means the target is between the left and mid pointer.(left half's range)
+
+                //it means the target is between the left and mid pointer
                 right =mid-1;
             } else {
+
                 //else ,the target must be in the right half.
                 left = mid+1;
             }
@@ -24,12 +31,15 @@ public class SearchInRotatedSortedArray {
                 //when the right half is sorted 
                 //if target is between nums[mid] and nums[right] 
                 if(nums[mid]<=target && target<=nums[right]){
+
+                    //search inside right half
                     left=mid+1;
                 } else {
                     right = mid-1;
                 }
             }
         }
+        //if target not found , return ans(-1).
         return ans;
     }
     public static void main(String[] args){

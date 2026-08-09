@@ -10,6 +10,7 @@ public class SearchInRotatedSortedArray {
 
             if(nums[mid]==target){
                 ans = mid;
+                return ans;
             } 
             else if (nums[left] <= target && target <= nums[mid]){
                 //it means the target is between the left and mid pointer.(left half's range)

@@ -23,7 +23,7 @@ public class SearchInRotatedSortedArray {
         return ans;
     }
     public static void main(String[] args){
-        int[]nums = {0,1,2,3,4,5,6,7};
+        int[]nums = {6,7,0,1,2,3,4,5};
         int target = 5;
         System.out.println(searchIndexOfTarget(nums,target));
     }

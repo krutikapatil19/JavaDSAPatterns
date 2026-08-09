@@ -9,22 +9,24 @@ public class SearchInRotatedSortedArray {
             int mid = (left+right)/2;
 
             if(nums[mid]==target){
-                ans = mid;
-                return ans;
+                return mid;
             } 
-            else if (nums[left] <= target && target <= nums[mid]){
+
+            else if (nums[left]<=nums[mid]){
+                if (nums[left] <= target && target <= nums[mid]){
                 //it means the target is between the left and mid pointer.(left half's range)
                 right =mid-1;
             } else {
                 //else ,the target must be in the right half.
                 left = mid+1;
             }
+            }
         }
         return ans;
     }
     public static void main(String[] args){
         int[]nums = {6,7,0,1,2,3,4,5};
-        int target = 5;
+        int target = 4;
         System.out.println(searchIndexOfTarget(nums,target));
     }
 }

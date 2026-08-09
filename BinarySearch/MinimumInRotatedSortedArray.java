@@ -9,14 +9,16 @@ public class MinimumInRotatedSortedArray {
             int mid = (left+right)/2;
 
             //checking which half is sorted
-            if(nums[left]<=mid){
+            if(nums[left]<=nums[mid]){
                 minimum = nums[left];
+            } else {
+                minimum = mid;
             }
         }
         return minimum;
     }
     public static void main(String[] args){
         int[] nums = {3,4,5,1,2};
-        System.out.println(nums);
+        System.out.println(findMinimum(nums));
     }
 }

@@ -10,8 +10,12 @@ public class SearchInRotatedSortedArray {
 
             if(nums[mid]==target){
                 ans = mid;
-            } else if (nums[mid]>target){
-                
+            } else if (nums[left]<=nums[mid]){
+                //it means the left half is sorted
+                right =mid-1;
+            } else {
+                //else ,the right half is sorted 
+                left = mid+1;
             }
         }
         return ans;

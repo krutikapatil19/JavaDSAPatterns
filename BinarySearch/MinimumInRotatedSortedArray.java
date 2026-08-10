@@ -12,7 +12,7 @@ public class MinimumInRotatedSortedArray {
             if(nums[left]<=nums[mid]){
                 minimum = nums[left];
             } else {
-                minimum = mid;
+                minimum = nums[mid];
             }
         }
         return minimum;

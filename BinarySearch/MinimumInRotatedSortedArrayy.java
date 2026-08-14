@@ -9,6 +9,7 @@ public class MinimumInRotatedSortedArrayy {
             int mid = (left+right)/2;
 
             if(nums[mid]<nums[right]){
+                
                 //right half is sorted 
                 //it means the minimum is either the mid element or its to the left of mid.
                 right = mid;

@@ -6,6 +6,7 @@ public class MinimumInRotatedSortedArrayy {
         int ans;
 
         while(left<right){
+            
             int mid = (left+right)/2;
 
             if(nums[mid]<nums[right]){

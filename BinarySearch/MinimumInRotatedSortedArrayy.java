@@ -14,6 +14,8 @@ public class MinimumInRotatedSortedArrayy {
                 //right half is sorted 
                 //it means the minimum is either the mid element or its to the left of mid.
                 right = mid;
+            } else {
+                left=mid+1;
             }
         }
     return ans;

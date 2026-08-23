@@ -11,6 +11,7 @@ public class FindPeakElement {
             //it tells the peak is in right direction
             left = mid+1;
         } else {
+            //going downhill, peak is at the mid,or the left side
             right = mid;
         }
     }

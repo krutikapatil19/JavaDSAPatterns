@@ -12,6 +12,7 @@ public class FindPeakElement {
             left = mid+1;
         } else {
             //going downhill, peak is at the mid,or the left side
+            //keep mid included, so right = mid (not mid-1)
             right = mid;
         }
     }

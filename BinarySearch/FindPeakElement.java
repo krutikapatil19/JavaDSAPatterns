@@ -4,13 +4,14 @@ public class FindPeakElement {
         int left = 0;
         int right = nums.length-1;
 
+        
         int mid = (left+right)/2;
 
         if(nums[mid]< nums[mid+1]){
             //it tells the peak is in right direction
             left = mid+1;
         } else {
-            right = mid-1;
+            right = mid;
         }
     }
     public static void main(String[] args){

@@ -6,8 +6,13 @@ public class SearchInRotatedSortedArrayII {
 
         while(left<=right){
             int mid = (left+right)/2;
-        }
 
+            //edge case
+            if(nums[left]==nums[right]==nums[mid]){
+                left++;
+                right--;
+            }
+        }
     }
     public static void main(String[] args){
         int[] nums = {2,5,6,0,0,1,2};

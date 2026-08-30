@@ -17,8 +17,10 @@ public class SearchInRotatedSortedArrayII {
             }
 
                 if(nums[left]<=target && target<=nums[mid]){
+                    //target is inside the sorted left half
+                    right = mid-1;
+                } else {
                     
-
                 }
             }
         }

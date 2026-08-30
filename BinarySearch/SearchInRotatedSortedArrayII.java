@@ -15,6 +15,12 @@ public class SearchInRotatedSortedArrayII {
             if(nums[mid]==target){
                 return true;
             }
+
+                if(nums[left]<=target && target<=nums[mid]){
+                    
+
+                }
+            }
         }
     }
     public static void main(String[] args){

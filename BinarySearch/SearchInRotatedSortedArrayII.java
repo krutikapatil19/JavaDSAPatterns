@@ -16,6 +16,8 @@ public class SearchInRotatedSortedArrayII {
                 return true;
             }
 
+            if(nums[left]<=nums[mid]){
+                        
                 if(nums[left]<=target && target<=nums[mid]){
                     //target is inside the sorted left half
                     right = mid-1;
@@ -24,6 +26,7 @@ public class SearchInRotatedSortedArrayII {
                 }
             }
         }
+        return false;
     }
     public static void main(String[] args){
         int[] nums = {2,5,6,0,0,1,2};

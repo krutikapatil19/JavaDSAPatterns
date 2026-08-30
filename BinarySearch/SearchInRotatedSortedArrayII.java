@@ -1,8 +1,13 @@
 public class SearchInRotatedSortedArrayII {
-    public static boolean search(int[] nums){
+    public static boolean search(int[] nums, int target){
+
+        int left = 0;
+        int right = nums.length-1;
 
     }
     public static void main(String[] args){
-        
+        int[] nums = {2,5,6,0,0,1,2};
+        int target = 0;
+
     }
 }

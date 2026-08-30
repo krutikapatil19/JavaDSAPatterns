@@ -20,7 +20,7 @@ public class SearchInRotatedSortedArrayII {
                     //target is inside the sorted left half
                     right = mid-1;
                 } else {
-                    
+                    left = mid+1;
                 }
             }
         }

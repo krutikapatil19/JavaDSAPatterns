@@ -8,7 +8,7 @@ public class SearchInRotatedSortedArrayII {
             int mid = (left+right)/2;
 
             //edge case
-            if(nums[left]==nums[right]==nums[mid]){
+            if(nums[left] == nums[mid] && nums[mid]==nums[right]){
                 left++;
                 right--;
             }

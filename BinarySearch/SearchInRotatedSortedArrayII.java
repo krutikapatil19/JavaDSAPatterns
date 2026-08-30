@@ -12,6 +12,9 @@ public class SearchInRotatedSortedArrayII {
                 left++;
                 right--;
             }
+            if(nums[mid]==target){
+                return true;
+            }
         }
     }
     public static void main(String[] args){

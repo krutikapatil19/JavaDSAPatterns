@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 public class FrequencyCountUsingHashMap {
 
     public static Map<Character,Integer> countFrequency(String str){
